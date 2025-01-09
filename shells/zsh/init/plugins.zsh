@@ -1,3 +1,8 @@
+# Add Homebrew to PATH and init
+eval "$(/opt/homebrew/bin/brew shellenv)"
+autoload -Uz compinit
+compinit
+
 # History Setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -24,6 +29,3 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Init Brew
-autoload -Uz compinit
-compinit
