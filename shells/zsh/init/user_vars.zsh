@@ -2,5 +2,5 @@
 ## Variables
 #
 
-export EDITOR=nvim # Yazi Default Editor
+export EDITOR=nvim # Default Editor
 set PATH $PATH /Users/will/.local/bin #PipX

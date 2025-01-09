@@ -11,5 +11,3 @@ end
 
 # Created by `pipx` on 2024-06-09 20:06:53
 set PATH $PATH /Users/will/.local/bin
-
-export EDITOR=nvim

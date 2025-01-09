@@ -25,5 +25,4 @@ if status is-interactive
     # Make nix less annoying to rebuild
     alias nix-rebuild 'darwin-rebuild switch --flake ~/.dotfiles/nix/charon'
     alias nrb nix-rebuild
-    alias rebuild nix-rebuild
 end
