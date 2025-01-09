@@ -89,6 +89,7 @@
         "vlc"
         "visual-studio-code@insiders"
         "ghostty"
+        "hammerspoon"
         ];
 };
 }
