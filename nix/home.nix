@@ -19,6 +19,7 @@
     ".config/fish/conf.d".source = ../shells/fish/conf.d;
     ".bashrc".source = ../shells/bash/bashrc;
     ".bash_profile".source = ../shells/bash/bash_profile;
+    ".config/nushell".source = ../shells/nushell;
 
     # Terminals
     ".wezterm.lua".source = ../terminals/wezterm.lua;
