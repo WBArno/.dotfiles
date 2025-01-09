@@ -42,7 +42,6 @@
     system.defaults = {
         dock.autohide = true;
         screencapture.location = "~/Pictures/Screenshots";
-        s
     };
 
     ## System Packages
