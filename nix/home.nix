@@ -14,12 +14,18 @@
   home.file = {
     # Shells
     ".zshrc".source = ../shells/zsh/.zshrc;
-    ".zshenv".source = ../shells/zsh/.zshenv;
     ".config/zsh".source = ../shells/zsh;
     ".config/fish".source = ../shells/fish;
 
     # Utils
-    
+    ".config/1Password".source = ../utils/1Password;
+    ".config/aerospace".source = ../utils/aerospace;
+    ".config/nvim".source = ../utils/nvim;
+    ".config/peazip".source = ../utils/peazip;
+    ".config/yazi/keymap.toml".source = ../utils/yazi/keymap.toml;
+    ".config/yazi/package.toml".source = ../utils/yazi/package.toml;
+    ".config/yazi/theme.toml".source = ../utils/yazi/theme.toml;
+    ".config/yazi/yazi.toml".source = ../utils/yazi/yazi.toml;
   };
   
   # Environment Variables
