@@ -1,6 +1,5 @@
 # Setting aliases for interactive sessions
 if status is-interactive
-    
     # Ties tailscale to cli element embedded in .app file
     alias tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     
@@ -22,4 +21,9 @@ if status is-interactive
 
     # Normalize VSCode Call
     alias code code-insiders
+
+    # Make nix less annoying to rebuild
+    alias nix-rebuild 'darwin-rebuild switch --flake ~/.dotfiles/nix/charon'
+    alias nrb nix-rebuild
+    alias rebuild nix-rebuild
 end

@@ -12,3 +12,7 @@ alias 7z=7zz                  # 7Zip (Standardizing)
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 # Foreground ClamAV scan
 alias clamav="/opt/homebrew/opt/clamav/sbin/clamd --foreground"
+# Make nix less annoying to rebuild
+alias nix-rebuild='darwin-rebuild switch --flake ~/.dotfiles/nix/charon'
+alias nrb=nix-rebuild
+alias rebuild=nix-rebuild
