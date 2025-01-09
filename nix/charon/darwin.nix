@@ -1,57 +1,82 @@
-#_:
 {pkgs, ...}:
 
 {
-# FOSS-Only is Overrated
-nixpkgs.config.allowUnfree = true;
+    #
+    ## Nix Settings
+    #
 
-services.nix-daemon.enable = true;
-# Necessary for using flakes on this system.
-nix.settings.experimental-features = "nix-command flakes";
-# nix.extraOptions.auto-optimise-store = true;
+    # Enable Nix Daemon
+    services.nix-daemon.enable = true;
 
-#system.configurationRevision = self.rev or self.dirtyRev or null;
+    # Necessary for using flakes on this system; why is this not default?
+    nix.settings.experimental-features = "nix-command flakes";
 
-# DO NOT CHANGE
-system.stateVersion = 4;
+    # FOSS-Only is Overrated
+    nixpkgs.config.allowUnfree = true;
 
-# The platform the configuration will be used on.
-# If you're on an Intel system, replace with "x86_64-darwin"
-nixpkgs.hostPlatform = "aarch64-darwin";
+    # DO NOT CHANGE
+    system.stateVersion = 4;
 
-# Declare the user that will be running `nix-darwin`.
-users.users.will = {
-    name = "will";
-    home = "/Users/will";
-};
+    # Host Architecture
+    nixpkgs.hostPlatform = "aarch64-darwin";
 
-# Create /etc/zshrc that loads the nix-darwin environment.
-#programs.zsh.enable = true;
+    # Declare the user that will be running `nix-darwin`.
+    users.users.will.home = "/Users/will";
 
-environment.systemPackages = with pkgs; [
-    # Command-Line Utilities
-    aria2
-    fastfetch
-    neovim
-    
-    aerospace
+    # Add Sudo TouchID Support
+    security.pam.enableSudoTouchIdAuth = true;
 
-    
-];
+    # Nix Package Optimization and Garbage Collection
+    nix.optimise.automatic = true;
+    nix.gc = {
+        automatic = true;
+        interval = { Weekday = 0; Hour = 0; Minute = 0; };
+        options = "--delete-older-than 30d";
+    };
 
-homebrew = {
-    enable = true;
-    # onActivation.cleanup = "uninstall";
 
-    taps = [];
-    brews = [
 
+    #
+    ## System Defaults
+    #
+    system.defaults = {
+        dock.autohide = true;
+        screencapture.location = "~/Pictures/Screenshots";
+        s
+    };
+
+    ## System Packages
+    #
+
+    environment.systemPackages = with pkgs; [
+        # Command-Line Utilities
+        aria2 # Better download manager
+        fastfetch # NeoFetch but fast (and still updated)
+        neovim # Semi-modern iteration of vim
+        starship # Cross-Shell Prompt Customization
+        aerospace # Window Manager
+        bat # Better cat
+        zoxide # Better cd
+        eza # Better ls
+
+
+
+        # Development Tools
+        arduino-cli # CLI Tools for Arduino
     ];
-    casks = [
-      "vlc"
-    ];
-};
 
-# Add Sudo TouchID Support
-security.pam.enableSudoTouchIdAuth = true;
+    homebrew = {
+        enable = true;
+        # Enable auto-uninstall of packages not listed here
+        # onActivation.cleanup = "uninstall";
+
+        taps = [];
+        brews = [
+
+        ];
+        casks = [
+        "vlc"
+        "visual-studio-code@insiders"
+        ];
+};
 }
