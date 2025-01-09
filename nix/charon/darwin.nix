@@ -60,7 +60,7 @@
 
         # Terminal Emulators
         wezterm
-        ghostty
+        # ghostty
 
 
         # Development Tools
@@ -79,6 +79,7 @@
         casks = [
         "vlc"
         "visual-studio-code@insiders"
+        "ghostty"
         ];
 };
 }
