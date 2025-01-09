@@ -12,7 +12,13 @@
   
   # Dotfile Management
   home.file = {
-    ".zshrc".source = ~/.dotfiles/zsh/.zshrc;
+    # Shells
+    ".zshrc".source = ../shells/zsh/.zshrc;
+    ".zshenv".source = ../shells/zsh/.zshenv;
+    ".config/zsh".source = ../shells/zsh;
+    ".config/fish".source = ../shells/fish;
+
+    # Utils
     
   };
   
