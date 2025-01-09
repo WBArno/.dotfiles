@@ -34,19 +34,27 @@
         options = "--delete-older-than 30d";
     };
 
+    # Nix Shells
+    programs.fish.enable = true;
+
+    # Tailscale
+    services.tailscale.enable = true;
+
 
 
     #
     ## System Defaults
     #
     system.defaults = {
-        dock.autohide = true;
-        screencapture.location = "~/Pictures/Screenshots";
+        # dock.autohide = true;
+        # screencapture.location = "~/Pictures/Screenshots";
     };
 
+
+
+    #
     ## System Packages
     #
-
     environment.systemPackages = with pkgs; [
         # Command-Line Utilities
         aria2 # Better download manager
@@ -57,20 +65,21 @@
         bat # Better cat
         zoxide # Better cd
         eza # Better ls
+        mas # Mac App Store CLI
 
         # Terminal Emulators
         wezterm
         # ghostty
 
-
         # Development Tools
         arduino-cli # CLI Tools for Arduino
     ];
 
+
     homebrew = {
         enable = true;
         # Enable auto-uninstall of packages not listed here
-        # onActivation.cleanup = "uninstall";
+        onActivation.cleanup = "none"; # "uninstall";
 
         taps = [];
         brews = [
