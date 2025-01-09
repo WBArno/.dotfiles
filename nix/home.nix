@@ -8,21 +8,17 @@
   home.stateVersion = "23.05";
 
   # List of packages to be installed/managed by HM
-  home.packages = with pkgs; [
-    aria2
-    fastfetch
-  ];
-
-  # ZSH Config
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+  home.packages = with pkgs; [];
+  
+  # Dotfile Management
+  home.file = {
+    ".zshrc".source = ~/.dotfiles/zsh/.zshrc;
+    
   };
-
+  
   # Environment Variables
   home.sessionVariables = {
     EDITOR = "nvim";
+    SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
   };
 }

@@ -12,8 +12,7 @@ nix.settings.experimental-features = "nix-command flakes";
 
 #system.configurationRevision = self.rev or self.dirtyRev or null;
 
-# Used for backwards compatibility. please read the changelog
-# before changing: `darwin-rebuild changelog`.
+# DO NOT CHANGE
 system.stateVersion = 4;
 
 # The platform the configuration will be used on.
@@ -30,7 +29,14 @@ users.users.will = {
 #programs.zsh.enable = true;
 
 environment.systemPackages = with pkgs; [
+    # Command-Line Utilities
+    aria2
+    fastfetch
+    neovim
+    
     aerospace
+
+    
 ];
 
 homebrew = {
