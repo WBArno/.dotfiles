@@ -58,6 +58,9 @@
         zoxide # Better cd
         eza # Better ls
 
+        # Terminal Emulators
+        wezterm
+        ghostty
 
 
         # Development Tools
