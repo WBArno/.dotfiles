@@ -15,7 +15,8 @@
     # Shells
     ".zshrc".source = ../shells/zsh/zshrc;
     ".config/zsh".source = ../shells/zsh;
-    ".config/fish".source = ../shells/fish;
+    ".config/fish/config.fish".source = ../shells/fish/config.fish;
+    ".config/fish/conf.d".source = ../shells/fish/conf.d;
     ".bashrc".source = ../shells/bash/bashrc;
     ".bash_profile".source = ../shells/bash/bash_profile;
 
