@@ -1,2 +1,6 @@
 # Custom Zsh file init
 for config (~/.config/zsh/init/*.zsh) source $config
+
+# Start Plugins
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"

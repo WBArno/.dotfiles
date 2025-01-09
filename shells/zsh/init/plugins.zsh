@@ -16,8 +16,6 @@ setopt hist_verify
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" # Init iTerm2
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh # Init Autosuggestions
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Init Syntax
-eval "$(zoxide init zsh)" # Init ZOxide
-
 
 # Init Yazi
 function y() {
