@@ -13,9 +13,15 @@
   # Dotfile Management
   home.file = {
     # Shells
-    ".zshrc".source = ../shells/zsh/.zshrc;
+    ".zshrc".source = ../shells/zsh/zshrc;
     ".config/zsh".source = ../shells/zsh;
     ".config/fish".source = ../shells/fish;
+    ".bashrc".source = ../shells/bash/bashrc;
+    ".bash_profile".source = ../shells/bash/bash_profile;
+
+    # Terminals
+    ".wezterm.lua".source = ../terminals/wezterm.lua;
+    ".tmux.conf".source = ../terminals/tmux.conf;
 
     # Utils
     ".config/1Password".source = ../utils/1Password;

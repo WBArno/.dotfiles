@@ -5,4 +5,4 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme # Init P10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # Load P10k Config
+[[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh # Load P10k Config
