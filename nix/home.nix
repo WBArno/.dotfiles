@@ -25,7 +25,7 @@
     ".wezterm.lua".source = ../terminals/wezterm.lua;
     ".tmux.conf".source = ../terminals/tmux.conf;
     "Library/Application Support/com.mitchellh.ghostty/config".source = ../terminals/ghostty.conf;
-    ".config/starship".source = ../terminals/starship;
+    ".config/starship".source = ../../terminals/starship;
 
     # Utils
     ".config/1Password".source = ../utils/1Password;
@@ -36,11 +36,12 @@
     ".config/yazi/package.toml".source = ../utils/yazi/package.toml;
     ".config/yazi/theme.toml".source = ../utils/yazi/theme.toml;
     ".config/yazi/yazi.toml".source = ../utils/yazi/yazi.toml;
+    ".config/bat".source = ../utils/bat;
   };
   
   # Environment Variables
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "code-insiders";
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
   };
 }
