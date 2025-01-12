@@ -20,6 +20,10 @@
     # Host Architecture
     nixpkgs.hostPlatform = "aarch64-darwin";
 
+    nix.extraOptions = ''
+        extra-platforms = x86_64-darwin aarch64-darwin
+    '';
+
     # Set hostname
     networking.hostName = "charon";
 
@@ -70,6 +74,18 @@
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
+
+        # Fish Plugins
+        fish
+        babelfish
+        fishPlugins.async-prompt
+        fishPlugins.async-prompt # Async prompt
+        fishPlugins.bass  # Bash commands in Fish
+        fishPlugins.autopair # Symbol pairing
+        fishPlugins.sponge # Shell history cleaner
+        fishPlugins.tide # A Fishy P10k
+        fishPlugins.fzf # Fuzzy Finder Keybinds
+        fishPlugins.z # ZSH's Z for Fish
     ];
 
 
@@ -83,10 +99,54 @@
 
         ];
         casks = [
-        "vlc"
-        "visual-studio-code@insiders"
+        "1password-cli@beta"
+        "1password@beta"
+        "arc"
+        "balenaetcher"
+        "bartender"
+        "battle-net"
+        "betterdiscord-installer"
+        "brewlet"
+        "crossover"
+        "discord"
+        "docker"
+        "double-commander"
+        "firefox"
+        "font-meslo-lg-nerd-font"
+        "font-symbols-only-nerd-font"
+        "forklift"
+        "fs-uae"
+        "fs-uae-launcher"
+        "ghidra"
         "ghostty"
+        "gog-galaxy"
+        "gzdoom"
         "hammerspoon"
+        "istat-menus"
+        "iterm2@beta"
+        "libreoffice"
+        "microsoft-edge"
+        "moonlight"
+        "obs"
+        "ollama"
+        "playcover-community"
+        "powershell@preview"
+        "prismlauncher"
+        "raspberry-pi-imager"
+        "raycast"
+        "remote-desktop-manager"
+        "shattered-pixel-dungeon"
+        "sidequest"
+        "steam"
+        "termius@beta"
+        "tigervnc-viewer"
+        "ultimaker-cura"
+        "utm"
+        "visual-studio-code@insiders"
+        "vlc"
+        "vmware-fusion"
+        "xiv-on-mac"
+        "xquartz"
         ];
-};
+    };
 }
