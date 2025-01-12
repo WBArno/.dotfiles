@@ -11,16 +11,16 @@ if status is-interactive
 end
 
 # Export Variables based on hostname
-switch (hostname)
-    case 'macbookpro.local'
-        fish_add_path /Users/will/.nix-profile/bin /run/current-system/sw/bin /etc/profiles/per-user/will/bin /nix/var/nix/profiles/default/bin
-    case 'steamdeck.local'
-        set -x HOSTNAME steamdeck # Filler for now
-    case '*'
-        set -x HOSTNAME (hostname) # Filler for now
-end
+#switch (hostname)
+#    case 'macbookpro.local'
+#        fish_add_path /Users/will/.nix-profile/bin /run/current-system/sw/bin /etc/profiles/per-user/will/bin /nix/var/nix/profiles/default/bin
+#    case 'steamdeck.local'
+#        set -x HOSTNAME steamdeck # Filler for now
+#    case '*'
+#        set -x HOSTNAME (hostname) # Filler for now
+#end
 
-source ~/.config/env.sh
+# source ~/.config/env.sh
 fish_add_path /Users/will/.local/bin #PipX
 
 
