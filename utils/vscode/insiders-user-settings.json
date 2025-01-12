@@ -1,0 +1,50 @@
+{
+    "arduino.useArduinoCli": true,
+    "arduino.commandPath": "arduino-cli",
+    "arduino.path": "/opt/homebrew/bin",
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.autoSave": "afterDelay",
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "unraid": "linux",
+        "pihole.local": "linux",
+        "steamdeck.local": "linux"
+    },
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "unraid.local",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "AcuParse",
+            "username": "acuparse",
+            "database": "acuparse",
+            "askForPassword": true
+        }
+    ],
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.external.osxExec": "Ghostty.app",
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+    "workbench.preferredLightColorTheme": "Nord",
+    "window.autoDetectColorScheme": true,
+    "window.zoomLevel": 1,
+    "window.zoomPerWindow": false,
+    "editor.fontFamily": "MesloLGS Nerd Font Mono, MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false,
+    "remote.tunnels.access.hostNameOverride": "Charon",
+    "git.enableCommitSigning": true,
+    "git.enableSmartCommit": true,
+    "github.gitProtocol": "ssh",
+    "dotfiles.repository": "https://github.com/wbarno/.dotfiles.git"
+}

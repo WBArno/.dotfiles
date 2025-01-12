@@ -7,24 +7,24 @@
 
 
 # Shells
-#ln -s $USER_CONFIG/shells/zsh/zshrc ~/.zshrc
-#ln -s $USER_CONFIG/shells/zsh $XDG_CONFIG_HOME/zsh
-#ln -s $USER_CONFIG/shells/fish/config.fish $XDG_CONFIG_HOME/fish/config.fish
-#ln -s $USER_CONFIG/shells/fish/conf.d $XDG_CONFIG_HOME/fish/conf.d
+#ln -s ~/.dotfiles/shells/zsh/zshrc ~/.zshrc
+#ln -s ~/.dotfiles/shells/zsh ~/.config/zsh
+#ln -s ~/.dotfiles/shells/fish/config.fish ~/.config/fish/config.fish
+#ln -s ~/.dotfiles/shells/fish/conf.d ~/.config/fish/conf.d
 
 # Terminals
-#ln -s $USER_CONFIG/terminals/starship $XDG_CONFIG_HOME/starship
-#ln -s $USER_CONFIG/terminals/tmux.conf ~/.tmux.conf
+#ln -s ~/.dotfiles/terminals/starship ~/.config/starship
+#ln -s ~/.dotfiles/terminals/tmux.conf ~/.tmux.conf
 
 # Utils
-#ln -s $USER_CONFIG/utils/aerospace $XDG_CONFIG_HOME/aerospace
-#ln -s $USER_CONFIG/utils/nvim $XDG_CONFIG_HOME/nvim
-#ln -s $USER_CONFIG/utils/peazip $XDG_CONFIG_HOME/peazip
-#ln -s $USER_CONFIG/utils/yazi/keymap.toml $XDG_CONFIG_HOME/yazi/keymap.toml
-#ln -s $USER_CONFIG/utils/yazi/package.toml $XDG_CONFIG_HOME/yazi/package.toml
-#ln -s $USER_CONFIG/utils/yazi/theme.toml $XDG_CONFIG_HOME/yazi/theme.toml
-#ln -s $USER_CONFIG/utils/yazi/yazi.toml $XDG_CONFIG_HOME/yazi/yazi.toml
-#ln -s $USER_CONFIG/utils/bat $XDG_CONFIG_HOME/bat
+#ln -s ~/.dotfiles/utils/aerospace ~/.config/aerospace
+#ln -s ~/.dotfiles/utils/nvim ~/.config/nvim
+#ln -s ~/.dotfiles/utils/peazip ~/.config/peazip
+#ln -s ~/.dotfiles/utils/yazi/keymap.toml ~/.config/yazi/keymap.toml
+#ln -s ~/.dotfiles/utils/yazi/package.toml ~/.config/yazi/package.toml
+#ln -s ~/.dotfiles/utils/yazi/theme.toml ~/.config/yazi/theme.toml
+#ln -s ~/.dotfiles/utils/yazi/yazi.toml ~/.config/yazi/yazi.toml
+#ln -s ~/.dotfiles/utils/bat ~/.config/bat
 
 #!/bin/bash
 # Primarily For use in VSCode devcontainers
@@ -34,33 +34,44 @@ export XDG_CONFIG_HOME=~/.config
 export USER_CONFIG=~/.dotfiles
 
 # Find hostname for conditional exports
-export HOSTNAME=$(hostname)
+HOSTNAME=$(hostname)
+# Using Switch for easier expandability to other hosts
+case "$HOSTNAME" in
+    'MacBookPro.local') # Macbook Pro
+        ln -s "~/.dotfiles/utils/vscode/insiders-user-settings.json" "~/Library/Application Support/Code - Insiders/User/settings.json"
+        ln -s "~/.dotfiles/utils/aerospace" "~/.config/aerospace"
+        ;;
+    *) # Linux
+        ln -s "~/.dotfiles/utils/vscode/insiders-user-settings.json" "~/.config/Code - Insiders/User/settings.json"
+        ;;
+esac
 
 
 # Declare an associative array for the links
 declare -A links=(
   # Shells
-  ["$USER_CONFIG/shells/zsh/zshrc"]="~/.zshrc"
-  ["$USER_CONFIG/shells/zsh"]="$XDG_CONFIG_HOME/zsh"
-  ["$USER_CONFIG/shells/fish/config.fish"]="$XDG_CONFIG_HOME/fish/config.fish"
-  ["$USER_CONFIG/shells/fish/conf.d"]="$XDG_CONFIG_HOME/fish/conf.d"
+  ["~/.dotfiles/shells/zsh/zshrc"]="~/.zshrc"
+  ["~/.dotfiles/shells/zsh"]="~/.config/zsh"
+  ["~/.dotfiles/shells/fish/config.fish"]="~/.config/fish/config.fish"
+  ["~/.dotfiles/shells/fish/conf.d"]="~/.config/fish/conf.d"
   
   # Terminals
-  ["$USER_CONFIG/terminals/starship"]="$XDG_CONFIG_HOME/starship"
-  ["$USER_CONFIG/terminals/tmux.conf"]="~/.tmux.conf"
+  ["~/.dotfiles/terminals/starship"]="~/.config/starship"
+  ["~/.dotfiles/terminals/tmux.conf"]="~/.tmux.conf"
   
   # Utils
-  ["$USER_CONFIG/utils/aerospace"]="$XDG_CONFIG_HOME/aerospace"
-  ["$USER_CONFIG/utils/nvim"]="$XDG_CONFIG_HOME/nvim"
-  ["$USER_CONFIG/utils/peazip"]="$XDG_CONFIG_HOME/peazip"
-  ["$USER_CONFIG/utils/yazi/keymap.toml"]="$XDG_CONFIG_HOME/yazi/keymap.toml"
-  ["$USER_CONFIG/utils/yazi/package.toml"]="$XDG_CONFIG_HOME/yazi/package.toml"
-  ["$USER_CONFIG/utils/yazi/theme.toml"]="$XDG_CONFIG_HOME/yazi/theme.toml"
-  ["$USER_CONFIG/utils/yazi/yazi.toml"]="$XDG_CONFIG_HOME/yazi/yazi.toml"
-  ["$USER_CONFIG/utils/bat"]="$XDG_CONFIG_HOME/bat"
+
+  ["~/.dotfiles/utils/nvim"]="~/.config/nvim"
+  ["~/.dotfiles/utils/peazip"]="~/.config/peazip"
+  ["~/.dotfiles/utils/yazi/keymap.toml"]="~/.config/yazi/keymap.toml"
+  ["~/.dotfiles/utils/yazi/package.toml"]="~/.config/yazi/package.toml"
+  ["~/.dotfiles/utils/yazi/theme.toml"]="~/.config/yazi/theme.toml"
+  ["~/.dotfiles/utils/yazi/yazi.toml"]="~/.config/yazi/yazi.toml"
+  ["~/.dotfiles/utils/bat"]="~/.config/bat"
+
 
   # Environment Variables
-  ["$USER_CONFIG/shells/environment_variables.sh"]="$XDG_CONFIG_HOME/env.zsh"
+  ["~/.dotfiles/shells/environment_variables.sh"]="~/.config/env.sh"
 )
 
 # Create symbolic links
