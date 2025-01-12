@@ -48,8 +48,18 @@
     ## Environment Variables
     #
     enviroment.variables = {
+        HOSTNAME = $(hostname);
+        XDG_CONFIG_HOME = "$HOME/.config";
+
+        DOT = "$HOME/.dotfiles";
+        DOT.NIX = "$DOTFILES/nix";
+        DOT.SHELL = "$DOTFILES/shells";
+        DOT.TERMINAL = "$DOTFILES/terminals";
+        DOT.UTILS = "$DOTFILES/utils";
+
         EDITOR = "code-insiders";
         SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
+
         NONINTERACTIVE_NIX = true;
     };
 
