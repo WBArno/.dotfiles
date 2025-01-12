@@ -24,7 +24,7 @@
   in
   {
     # Nix-Darwin Config
-    darwinConfigurations."Charon" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."charon" = nix-darwin.lib.darwinSystem {
       modules = [
         # Load Darwin configuration file
         ./darwin.nix

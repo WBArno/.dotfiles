@@ -42,5 +42,5 @@
   };
   
   # Environment Variables
-  home.sessionVariables = { };
+  # home.sessionVariables = { };
 }

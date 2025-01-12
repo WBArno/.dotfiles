@@ -1,7 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    eval "$(starship init fish)"
+    #eval "$(starship init fish)"
     source ~/.iterm2_shell_integration.fish
 
     # Initialize zOxide
@@ -20,7 +20,7 @@ end
 #        set -x HOSTNAME (hostname) # Filler for now
 #end
 
-# source ~/.config/env.sh
+source ~/.config/env.sh
 fish_add_path /Users/will/.local/bin #PipX
 
 

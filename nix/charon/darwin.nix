@@ -37,45 +37,14 @@
         options = "--delete-older-than 30d";
     };
 
-    # Nix Shells
-    programs.fish.enable = true;
-    programs.zsh.enable = true;
-    programs.bash.enable = true;
-
-    # Tailscale
-    services.tailscale.enable = true;
-
-
-
-    #
-    ## Environment Variables
-    #
-    enviroment.variables = {
-        HOSTNAME = "charon";
-        XDG_CONFIG_HOME = "$HOME/.config";
-
-        DOT = {
-            FILES = "$HOME/.dotfiles";
-            NIX = "$DOTFILES/nix";
-            SHELL = "$DOTFILES/shells";
-            TERMINAL = "$DOTFILES/terminals";
-            UTILS = "$DOTFILES/utils";
-        };
-
-        EDITOR = "code-insiders";
-        SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
-
-        NONINTERACTIVE_NIX = true;
-    };
-
 
 
     #
     ## System Defaults
     #
     system.defaults = {
-        # dock.autohide = true;
-        # screencapture.location = "~/Pictures/Screenshots";
+        dock.autohide = true;
+        screencapture.location = "~/Pictures/Screenshots";
     };
 
 
