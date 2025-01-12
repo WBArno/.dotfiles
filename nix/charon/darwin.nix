@@ -20,7 +20,10 @@
     # Host Architecture
     nixpkgs.hostPlatform = "aarch64-darwin";
 
-    # Declare the user that will be running `nix-darwin`.
+    # Set hostname
+    networking.hostName = "charon";
+
+    # Set User Home Directory
     users.users.will.home = "/Users/will";
 
     # Add Sudo TouchID Support
@@ -48,7 +51,7 @@
     ## Environment Variables
     #
     enviroment.variables = {
-        HOSTNAME = (hostname);
+        HOSTNAME = charon;
         XDG_CONFIG_HOME = "$HOME/.config";
 
         DOT = {
