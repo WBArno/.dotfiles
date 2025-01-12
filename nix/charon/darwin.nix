@@ -36,9 +36,22 @@
 
     # Nix Shells
     programs.fish.enable = true;
+    programs.zsh.enable = true;
+    programs.bash.enable = true;
 
     # Tailscale
     services.tailscale.enable = true;
+
+
+
+    #
+    ## Environment Variables
+    #
+    enviroment.variables = {
+        EDITOR = "code-insiders";
+        SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
+        NONINTERACTIVE_NIX = true;
+    };
 
 
 

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # Let HM install itself
@@ -13,14 +13,14 @@
   # Dotfile Management
   home.file = {
     # Shells
-    ".zshrc".source = ../shells/zsh/zshrc;
-    ".config/zsh".source = ../shells/zsh;
-    ".config/fish/config.fish".source = ../shells/fish/config.fish;
-    ".config/fish/conf.d".source = ../shells/fish/conf.d;
-    ".bashrc".source = ../shells/bash/bashrc;
-    ".bash_profile".source = ../shells/bash/bash_profile;
-    ".config/nushell".source = ../shells/nushell;
-    ".config/env.sh".source = ../shells/environment_variables.sh;
+    ".zshrc".source = config.lib.file.mkOutOfStoreSymlink ../shells/zsh/zshrc;
+    ".config/zsh".source = config.lib.file.mkOutOfStoreSymlink ../shells/zsh;
+    ".config/fish/config.fish".source = config.lib.file.mkOutOfStoreSymlink ../shells/fish/config.fish;
+    ".config/fish/conf.d".source = config.lib.file.mkOutOfStoreSymlink ../shells/fish/conf.d;
+    ".bashrc".source = config.lib.file.mkOutOfStoreSymlink ../shells/bash/bashrc;
+    ".bash_profile".source = config.lib.file.mkOutOfStoreSymlink ../shells/bash/bash_profile;
+    ".config/nushell".source = config.lib.file.mkOutOfStoreSymlink ../shells/nushell;
+    ".config/env.sh".source = config.lib.file.mkOutOfStoreSymlink ../shells/environment_variables.sh;
 
 
     # Terminals
@@ -42,8 +42,5 @@
   };
   
   # Environment Variables
-  home.sessionVariables = {
-    EDITOR = "code-insiders";
-    SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
-  };
+  home.sessionVariables = { };
 }
