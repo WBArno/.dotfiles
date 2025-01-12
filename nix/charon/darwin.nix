@@ -51,7 +51,7 @@
     ## Environment Variables
     #
     enviroment.variables = {
-        HOSTNAME = charon;
+        HOSTNAME = "charon";
         XDG_CONFIG_HOME = "$HOME/.config";
 
         DOT = {
