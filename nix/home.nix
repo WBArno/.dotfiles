@@ -24,7 +24,7 @@
     # Terminals
     ".wezterm.lua".source = ../terminals/wezterm.lua;
     ".tmux.conf".source = ../terminals/tmux.conf;
-    "Library/Application Support/com.mitchellh.ghostty/config".source = ../terminals/ghostty.conf;
+    ".config/ghostty".source = ../terminals/ghostty;
     ".config/starship".source = ../terminals/starship;
 
     # Utils
