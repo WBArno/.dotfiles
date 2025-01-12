@@ -10,22 +10,6 @@
         "pihole.local": "linux",
         "steamdeck.local": "linux"
     },
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "unraid.local",
-            "port": 3306,
-            "driver": "MariaDB",
-            "name": "AcuParse",
-            "username": "acuparse",
-            "database": "acuparse",
-            "askForPassword": true
-        }
-    ],
     "git.autofetch": true,
     "git.confirmSync": false,
     "terminal.explorerKind": "external",
