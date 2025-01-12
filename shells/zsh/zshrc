@@ -2,7 +2,7 @@
 for config (~/.config/zsh/init/*.zsh) source $config
 
 # Source General Environment Variables
-sour
+source ~/.config/env.sh
 set PATH $PATH /Users/will/.local/bin #PipX
 # Start Plugins
 eval "$(zoxide init zsh)"

@@ -19,7 +19,7 @@ switch (hostname)
         set -x HOSTNAME (hostname) # Filler for now
 end
 
-
+source ~/.config/env.sh
 fish_add_path /Users/will/.local/bin #PipX
 
 

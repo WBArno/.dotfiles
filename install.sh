@@ -60,8 +60,7 @@ declare -A links=(
   ["$USER_CONFIG/utils/bat"]="$XDG_CONFIG_HOME/bat"
 
   # Environment Variables
-  ["$USER_CONFIG/shells/environment_variables.sh"]="$XDG_CONFIG_HOME/zsh/env.zsh"
-  ["$USER_CONFIG/shells/environment_variables.sh"]="$XDG_CONFIG_HOME/fish/conf.d/env.fish"
+  ["$USER_CONFIG/shells/environment_variables.sh"]="$XDG_CONFIG_HOME/env.zsh"
 )
 
 # Create symbolic links
