@@ -30,5 +30,6 @@
     "git.enableCommitSigning": true,
     "git.enableSmartCommit": true,
     "github.gitProtocol": "ssh",
-    "dotfiles.repository": "https://github.com/wbarno/.dotfiles.git"
+    "dotfiles.repository": "https://github.com/wbarno/.dotfiles.git",
+    "dotfiles.targetPath": "~/.dotfiles"
 }

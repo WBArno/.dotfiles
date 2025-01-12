@@ -25,4 +25,8 @@ if status is-interactive
     # Make nix less annoying to rebuild
     alias nix-rebuild 'darwin-rebuild switch --flake ~/.dotfiles/nix/charon'
     alias nrb nix-rebuild
+
+    # Use bat instead of cat or man
+    alias cat bat
+    alias man batman
 end

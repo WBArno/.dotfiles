@@ -3,6 +3,7 @@ export XDG_CONFIG_HOME=$HOME/.config # XDG Config
 export XDG_DATA_HOME=$HOME/.local/share # XDG Data
 export XDG_CACHE_HOME=$HOME/.cache # XDG Cache
 export DOTFILES=$HOME/.dotfiles
+export CONFIG=$HOME/.config
 
 # Volumes
 export VOLUMES_DIR=/Volumes
