@@ -20,6 +20,8 @@
     ".bashrc".source = ../shells/bash/bashrc;
     ".bash_profile".source = ../shells/bash/bash_profile;
     ".config/nushell".source = ../shells/nushell;
+    ".config/fish/conf.d/env.fish".source = ../shells/environment_variables.sh;
+    ".config/zsh/env.zsh".source = ../shells/environment_variables.sh;
 
     # Terminals
     ".wezterm.lua".source = ../terminals/wezterm.lua;

@@ -1,6 +1,9 @@
 # Custom Zsh file init
 for config (~/.config/zsh/init/*.zsh) source $config
 
+# Source General Environment Variables
+sour
+set PATH $PATH /Users/will/.local/bin #PipX
 # Start Plugins
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
