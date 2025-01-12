@@ -22,5 +22,7 @@ end
 
 source ~/.config/env.sh
 fish_add_path /Users/will/.local/bin #PipX
+source /run/current-system/sw/etc/profile.d/nix.fish
+source /run/current-system/sw/etc/profile.d/nix-daemon.fish
 
 

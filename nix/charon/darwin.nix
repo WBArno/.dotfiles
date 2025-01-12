@@ -76,14 +76,8 @@
         arduino-cli # CLI Tools for Arduino
 
         # Fish Plugins
-        fish
-        babelfish
-        fishPlugins.async-prompt
-        fishPlugins.async-prompt # Async prompt
-        fishPlugins.bass  # Bash commands in Fish
-        fishPlugins.autopair # Symbol pairing
-        fishPlugins.sponge # Shell history cleaner
-        fishPlugins.tide # A Fishy P10k
+
+
         fishPlugins.fzf # Fuzzy Finder Keybinds
         fishPlugins.z # ZSH's Z for Fish
     ];
