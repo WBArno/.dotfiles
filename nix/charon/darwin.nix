@@ -110,7 +110,6 @@
         tigervnc # VNC Client
         libreoffice-bin # Office Suite
         #rpi-imager # Raspberry Pi Imager
-        mucommander # File Manager
 
         # Emu/Virt
         dosbox-x # DOS Emulator
