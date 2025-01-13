@@ -78,6 +78,10 @@
         lazydocker # Docker TUI
         yazi # TUI File Manager
         mc # Midnight Commander
+        ripgrep # Better grep
+        m-cli # macOS Command Line Tools
+        nh # Nix Helper
+        coreutils # GNU Core Utilities
 
         # Terminal Emulators
         wezterm
