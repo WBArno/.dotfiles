@@ -96,15 +96,14 @@
         arduino-cli # CLI Tools for Arduino
         docker # Containerization Client
         docker-compose # Containerization Orchestration Tool
-        docker-client
         #ghidra
         devbox # Development Environment
+        exercism # Code Practice
 
         # Utils
         xquartz # X11 for macOS
         clamav # Antivirus
         arc-browser # Swift Web Browser
-        ollama # LLM
         istatmenus # System Monitoring
         bartender # Menu Bar Organizer
         raycast # Spotlight Replacement
@@ -124,9 +123,7 @@
         vlc-bin # Media Player
 
         # Games
-        discord # Chat for Gamers
         cataclysm-dda-git # Cataclysm: Dark Days Ahead Traditional Roguelike
-        shattered-pixel-dungeon # Pixel Dungeon Traditional Roguelike
         crawl # Dungeon Crawl Stone Soup
         prismlauncher # Minecraft launcher
         gogdl # GOG Downloader for Heroic
@@ -137,50 +134,107 @@
     homebrew = {
         enable = true;
         # Enable auto-uninstall of packages not listed here
-        onActivation.cleanup = "none"; # "uninstall";
+        onActivation.cleanup = "uninstall"; # "none";
 
         taps = [];
         brews = [
-            "powerlevel10k"
+            "bat-extras" # Additional features for bat
+            "brew-cask-completion" # Fish completion for Homebrew Casks
+            "docker-completion" # Shell completion for Docker
+            "fish" # Fish Shell
+            "fisher" # Fish Plugin Manager
+            "powerlevel10k" # Powerlevel10k ZSH Theme
+            "zsh-autosuggestions" # Fish-like autosuggestions for ZSH
+            "zsh-lovers" # ZSH Plugin Collection
+            "zsh-syntax-highlighting" # Fish-like syntax highlighting for ZSH
         ];
         casks = [
-            "1password-cli@beta"
-            "1password@beta"
-            "balenaetcher"
-            "battle-net"
-            "betterdiscord-installer"
-            "brewlet"
-            "crossover"
-            "docker"
-            "firefox"
-            "forklift"
-            "fs-uae"
-            "fs-uae-launcher"
-            "ghidra"
-            "ghostty"
-            "gog-galaxy"
-            "gzdoom"
-            "hammerspoon"
-            "heroic"
-            "iterm2@beta"
-            "microsoft-edge"
-            "ollama"
-            "obsidian"
-            "openrct2"
-            "playcover-community"
-            "powershell@preview"
-            "raspberry-pi-imager"
-            "remote-desktop-manager"
-            "sidequest"
-            "steam"
-            "termius@beta"
-            "ultimaker-cura"
-            "visual-studio-code@insiders"
-            "vmware-fusion"
-            "xiv-on-mac"
+            "1password-cli@beta" # Password Manager CLI
+            "1password@beta" # Password Manager
+            "balenaetcher" # USB Flashing Tool
+            "battle-net" # Blizzard Game Client
+            "betterdiscord-installer" # Discord Plugins
+            "brewlet" # Homebrew Dock Icon
+            "crossover" # Windows Emulator
+            "discord" # Chat Client
+            "docker" # Containerization Desktop Client
+            "firefox" # Web Browser
+            "forklift" # SFTP File Manager
+            "fs-uae" # Amiga Emulator
+            "fs-uae-launcher" # Amiga Emulator Frontend
+            "ghidra" # Reverse Engineering Tool
+            "ghostty" # Terminal Emulator
+            "gog-galaxy" # Good Old Games Client
+            "gzdoom" # Doom Source Port
+            "hammerspoon" # MacOS Automation Tool
+            "heroic" # Epic Games Store Downloader
+            "iterm2@beta" # Terminal Emulator
+            "microsoft-edge" # Web Browser
+            "obs" # Screen Recording Software
+            "obsidian" # Markdown-based Note-Taking App
+            "ollama" # Large Language Model Server
+            "openrct2" # RollerCoaster Tycoon 2 Reimplementation
+            "playcover-community" # Unsupported iOS Game Launcher
+            "powershell@preview" # PowerShell Core
+            "raspberry-pi-imager" # Raspberry Pi OS Imager
+            "remote-desktop-manager" # Remote Desktop Manager
+            "shattered-pixel-dungeon" # Pixel Dungeon Traditional Roguelike
+            "sidequest" # Oculus Quest Sideloading Manager
+            "steam" # Game Client
+            "termius@beta" # SSH Client
+            "ultimaker-cura" # 3D Printer Slicer
+            "visual-studio-code@insiders" # Code Editor
+            "vmware-fusion" # Virtualization
+            "xiv-on-mac" # Final Fantasy XIV Launcher
         ];
-        masApps = {
+        masApps = { # Mac App Store Apps
+            # Productivity
+            Enchanted = 6474268307; # Enchanted Ollama UI
+            Pages = 409201541; # Pages Word Processor
+            "Adobe Lightroom" = 1451544217; # Adobe Lightroom Photo Editor
+            iMovie = 408981434; # iMovie Video Editor
+            Numbers = 409203825; # Numbers Spreadsheet
+            Keynote = 409183694; # Keynote Presentation Software
 
+            # Development
+            # Xcode = 497799835; # Xcode IDE
+            Playgrounds = 1496833156; # Swift Playgrounds
+            Developer = 640199958; # Apple Developer News
+
+            # Network Utilities
+            Speedtest = 1153157709; # Speedtest by Ookla
+            Tailscale = 1475387142; # Tailscale VPN
+            "Windows App" = 1295203466; # Windows Remote Desktop
+            Surfshark = 1437809329; # Surfshark VPN
+
+            # Utils
+            TestFlight = 899247664; # TestFlight Beta Testing
+            # CrystalFetch = 6454431289; # CrystalFetch Image Downloader
+            # "Home Assistant" = 1099568401; # Home Automation - USING TF BUILD
+            # "Okta Verify" = 490179405; # Okta 2FA
+
+            # Safari Extensions
+            Wipr = 1662217862; # Wipr Ad Blocker
+            "Baking Soda" = 1601151613; # Baking Soda Video Extractor
+            DeArrow = 6451469297; # YouTube De-Clickbait Extension
+            Vinegar = 1591303229; # Vinegar Video Extractor
+            Hush = 1544743900; # Hush Nag Blocker
+            SponsorBlock = 1573461917; # YouTube Sponsor Segment Blocker
+
+            # Games
+            # "Football Manager 2024" = 1626267810; # Football Manager 2024
+            "Steam Link" = 1246969117; # Steam Link Game Streaming
+            "Balatro+" = 6502451661; # Balatro
+            # "Snake.io+" = 6443553808; # Snake.io
+            # "WHAT THE GOLF" = 1474771319; # WHAT THE GOLF
+            "BloonsTD6+" = 1584423325; # Bloons TD 6
+            "Mini Motorways" = 1456188526; # Mini Motorways
+            # AngryBirdsReloaded = 1539172625; # Angry Birds
+
+            # Media
+            "Manabi Reader" = 1247286380; # Manabi Reader Language Learning
+            Kindle = 302584613; # Kindle E-Reader
+            # Infuse = 1136220934; # Infuse Media Player
         };
     };
 }
