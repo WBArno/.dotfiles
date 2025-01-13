@@ -98,6 +98,7 @@
         docker-compose # Containerization Orchestration Tool
         docker-client
         #ghidra
+        devbox # Development Environment
 
         # Utils
         xquartz # X11 for macOS
