@@ -57,29 +57,74 @@
     ## System Packages
     #
     environment.systemPackages = with pkgs; [
+        # Shells
+        nushell
+        
         # Command-Line Utilities
+        p7zip # 7-Zip Compression
+        wget2 # At least it's not curl
         aria2 # Better download manager
         fastfetch # NeoFetch but fast (and still updated)
         neovim # Semi-modern iteration of vim
         starship # Cross-Shell Prompt Customization
         aerospace # Window Manager
         bat # Better cat
+        fzf
         zoxide # Better cd
         eza # Better ls
         mas # Mac App Store CLI
+        lazygit # Git TUI
+        lazydocker # Docker TUI
+        yazi # TUI File Manager
 
         # Terminal Emulators
         wezterm
         # ghostty
+        tmux # Terminal Multiplexer
+        iterm2 # Terminal Emulator
+
+        # Languages
+        python313 # Python 3.13
+        pipx # Python Package Manager
+        jre # Java Runtime Environment
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
+        docker # Containerization Client
+        docker-compose # Containerization Orchestration Tool
+        docker-client
+        #ghidra
 
-        # Fish Plugins
+        # Utils
+        xquartz # X11 for macOS
+        clamav # Antivirus
+        arc-browser # Swift Web Browser
+        ollama # LLM
+        istatmenus # System Monitoring
+        bartender # Menu Bar Organizer
+        raycast # Spotlight Replacement
+        tigervnc # VNC Client
+        libreoffice-bin # Office Suite
+        #rpi-imager # Raspberry Pi Imager
 
+        # Emu/Virt
+        dosbox-x # DOS Emulator
+        utm # Virtualization Frontend
 
-        fishPlugins.fzf # Fuzzy Finder Keybinds
-        fishPlugins.z # ZSH's Z for Fish
+        # AV Programs
+        # handbrake # Video Transcoder
+        imagemagick # Image Manipulation
+        mpv # Media Player
+        gimp-with-plugins # Image Editor
+
+        # Games
+        discord # Chat for Gamers
+        cataclysm-dda-git # Cataclysm: Dark Days Ahead Traditional Roguelike
+        shattered-pixel-dungeon # Pixel Dungeon Traditional Roguelike
+        crawl # Dungeon Crawl Stone Soup
+        prismlauncher # Minecraft launcher
+        gogdl # GOG Downloader for Heroic
+        moonlight-qt # Game Streaming Client
     ];
 
 
@@ -90,57 +135,49 @@
 
         taps = [];
         brews = [
-
         ];
         casks = [
-        "1password-cli@beta"
-        "1password@beta"
-        "arc"
-        "balenaetcher"
-        "bartender"
-        "battle-net"
-        "betterdiscord-installer"
-        "brewlet"
-        "crossover"
-        "discord"
-        "docker"
-        "double-commander"
-        "firefox"
-        "font-meslo-lg-nerd-font"
-        "font-symbols-only-nerd-font"
-        "forklift"
-        "fs-uae"
-        "fs-uae-launcher"
-        "ghidra"
-        "ghostty"
-        "gog-galaxy"
-        "gzdoom"
-        "hammerspoon"
-        "istat-menus"
-        "iterm2@beta"
-        "libreoffice"
-        "microsoft-edge"
-        "moonlight"
-        "obs"
-        "ollama"
-        "playcover-community"
-        "powershell@preview"
-        "prismlauncher"
-        "raspberry-pi-imager"
-        "raycast"
-        "remote-desktop-manager"
-        "shattered-pixel-dungeon"
-        "sidequest"
-        "steam"
-        "termius@beta"
-        "tigervnc-viewer"
-        "ultimaker-cura"
-        "utm"
-        "visual-studio-code@insiders"
-        "vlc"
-        "vmware-fusion"
-        "xiv-on-mac"
-        "xquartz"
+            "1password-cli@beta"
+            "1password@beta"
+            "balenaetcher"
+            "battle-net"
+            "betterdiscord-installer"
+            "brewlet"
+            "crossover"
+            "docker"
+            "double-commander"
+            "firefox"
+            "font-meslo-lg-nerd-font"
+            "font-symbols-only-nerd-font"
+            "forklift"
+            #"fs-uae"
+            #"fs-uae-launcher"
+            "ghidra"
+            "ghostty"
+            "gog-galaxy"
+            "gzdoom"
+            "hammerspoon"
+            "heroic"
+            "iterm2@beta"
+            "microsoft-edge"
+            "ollama"
+            "obsidian"
+            "openrct2"
+            "playcover-community"
+            "powershell@preview"
+            "raspberry-pi-imager"
+            "remote-desktop-manager"
+            "sidequest"
+            "steam"
+            "termius@beta"
+            "ultimaker-cura"
+            "visual-studio-code@insiders"
+            "vlc"
+            "vmware-fusion"
+            "xiv-on-mac"
         ];
+        masApps = {
+
+        };
     };
 }

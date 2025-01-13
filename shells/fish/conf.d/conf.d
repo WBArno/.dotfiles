@@ -1,1 +1,0 @@
-/Users/will/.dotfiles/shells/fish/conf.d

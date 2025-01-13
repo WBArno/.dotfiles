@@ -1,7 +1,6 @@
 {
     "arduino.useArduinoCli": true,
-    "arduino.commandPath": "arduino-cli",
-    "arduino.path": "/opt/homebrew/bin",
+    "arduino.path": "/run/current-system/sw/bin/",
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "afterDelay",
     "remote.SSH.useLocalServer": false,
