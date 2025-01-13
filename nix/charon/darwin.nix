@@ -69,24 +69,28 @@
         starship # Cross-Shell Prompt Customization
         aerospace # Window Manager
         bat # Better cat
-        fzf
+        fzf # Fuzzy Finder
+        fd # Better find
         zoxide # Better cd
         eza # Better ls
         mas # Mac App Store CLI
         lazygit # Git TUI
         lazydocker # Docker TUI
         yazi # TUI File Manager
+        mc # Midnight Commander
 
         # Terminal Emulators
         wezterm
         # ghostty
         tmux # Terminal Multiplexer
         iterm2 # Terminal Emulator
+        meslo-lgs-nf # Nerd Font for Terminal
 
         # Languages
         python313 # Python 3.13
         pipx # Python Package Manager
         jre # Java Runtime Environment
+        dotnet-sdk # .NET SDK
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
@@ -106,6 +110,7 @@
         tigervnc # VNC Client
         libreoffice-bin # Office Suite
         #rpi-imager # Raspberry Pi Imager
+        mucommander # File Manager
 
         # Emu/Virt
         dosbox-x # DOS Emulator
@@ -116,6 +121,7 @@
         imagemagick # Image Manipulation
         mpv # Media Player
         gimp-with-plugins # Image Editor
+        vlc-bin # Media Player
 
         # Games
         discord # Chat for Gamers
@@ -145,13 +151,10 @@
             "brewlet"
             "crossover"
             "docker"
-            "double-commander"
             "firefox"
-            "font-meslo-lg-nerd-font"
-            "font-symbols-only-nerd-font"
             "forklift"
-            #"fs-uae"
-            #"fs-uae-launcher"
+            "fs-uae"
+            "fs-uae-launcher"
             "ghidra"
             "ghostty"
             "gog-galaxy"
@@ -172,7 +175,6 @@
             "termius@beta"
             "ultimaker-cura"
             "visual-studio-code@insiders"
-            "vlc"
             "vmware-fusion"
             "xiv-on-mac"
         ];
