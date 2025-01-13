@@ -59,8 +59,7 @@
     environment.systemPackages = with pkgs; [
         # Shells
         nushell
-        zsh-powerlevel10k # Zsh Prompt
-        
+
         # Command-Line Utilities
         p7zip # 7-Zip Compression
         wget2 # At least it's not curl
@@ -142,6 +141,7 @@
 
         taps = [];
         brews = [
+            "powerlevel10k"
         ];
         casks = [
             "1password-cli@beta"
