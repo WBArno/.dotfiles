@@ -59,6 +59,7 @@
     environment.systemPackages = with pkgs; [
         # Shells
         nushell
+        zsh-powerlevel10k # Zsh Prompt
         
         # Command-Line Utilities
         p7zip # 7-Zip Compression
