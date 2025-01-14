@@ -87,7 +87,7 @@
         wezterm
         # ghostty
         tmux # Terminal Multiplexer
-        iterm2 # Terminal Emulator
+        #iterm2 # Terminal Emulator
         meslo-lgs-nf # Nerd Font for Terminal
 
         # Languages
