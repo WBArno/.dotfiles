@@ -60,7 +60,7 @@
 
       #EDITOR=code-insiders;
     };
-    
+
     # Shell Aliases
     shellAliases = {
       # Replaces ls with eza

@@ -36,28 +36,29 @@
     },
     "nix.enableLanguageServer": true,
     "nix.serverSettings": {
-        
-
-        // settings for 'nixd' LSP
         "nixd": {
             "formatting": {
-                // This is the default if ommited.
-                "command": [ "nixfmt" ]
+                "command": [ "nixpkgs-fmt" ]
             },
             "options": {
-                // By default, this entriy will be read from `import <nixpkgs> { }`
-                // You can write arbitary nix expression here, to produce valid "options" declaration result.
+                // By default, this entriy will be read from `import <nixpkgs> { }`.
+                // You can write arbitary Nix expressions here, to produce valid "options" declaration result.
                 // Tip: for flake-based configuration, utilize `builtins.getFlake`
                 "nixos": {
-                    "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix/Charon\").nixosConfigurations.charon.options"
+                    "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix/charon\").nixosConfigurations.charon.options"
                 },
                 "home-manager": {
                     "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix\").homeConfigurations.will@charon.options"
+                },
+                // Tip: use ${workspaceFolder} variable to define path
+                "nix-darwin": {
+                  "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix/charon\").darwinConfigurations.charon.options"
                 }
             }
         }
     },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "nix.serverPath": "nixd"
 }
