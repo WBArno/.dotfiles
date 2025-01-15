@@ -1,5 +1,5 @@
 # Main Home Manager Config
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager Program Management 

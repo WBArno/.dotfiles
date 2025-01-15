@@ -7,9 +7,6 @@
   enableCompletion = true;
   autosuggestion.enable = true;
   syntaxHighlighting.enable = true;
-  plugins = with pkgs; [ 
-    # zsh-powerlevel10k # Powerline Theme for Zsh
-  ];
   shellAliases = { };
   initExtra = ''
     # Enable Homebrew Commands
