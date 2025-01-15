@@ -1,15 +1,33 @@
+# Main Home Manager Config
 { pkgs, config, ... }:
 
 {
-  # Let HM install itself
-  programs.home-manager.enable = true;
+  # Home Manager Program Management 
+  programs = import ./homeModules/programs.nix { inherit pkgs config; };
   
   # Do not change this!
   home = {
     stateVersion = "23.05";
 
     # List of packages to be installed/managed by HM
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ 
+        # Fish Plugins
+        fishPlugins.tide
+        fishPlugins.bass
+        fishPlugins.pisces
+        fishPlugins.sponge
+
+        # Bat Extras
+        bat-extras.batgrep
+        bat-extras.batdiff
+        bat-extras.batman
+        bat-extras.batpipe
+        bat-extras.batwatch
+        bat-extras.prettybat
+
+        # Utilities
+        wget2
+    ];
     
     # Dotfile Management
     file = {
@@ -41,10 +59,23 @@
       #".config/yazi/yazi.toml".source = ../utils/yazi/yazi.toml;
       #".config/bat".source = ../utils/bat;
     };
-    
+
     # Environment Variables
     sessionVariables = { 
+      HOSTNAME="$(hostname)";
+      XDG_CONFIG_HOME="$HOME/.config"; # XDG Config
+      XDG_DATA_HOME="$HOME/.local/share"; # XDG Data
+      XDG_CACHE_HOME="$HOME/.cache"; # XDG Cache
+      CONFIG="$HOME/.config";
 
+      # Dotfiles
+      DOTFILES="$HOME/.dotfiles";
+      DOT_NIX="$DOTFILES/nix";
+      DOT_SHELL="$DOTFILES/shells";
+      DOT_TERMINAL="$DOTFILES/terminals";
+      DOT_UTILS="$DOTFILES/utils";
+
+      #EDITOR=code-insiders;
     };
   };
 }

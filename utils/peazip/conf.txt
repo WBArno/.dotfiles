@@ -84,7 +84,7 @@ default.txt
 
 [save history of recent archives]
 1
-
+/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Anki_collection.7z
 
 
 
@@ -215,7 +215,7 @@ Deflate
 1
 
 [last output path]
-/Users/will/
+/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads/
 
 [height of the navigation's splitter]
 220
@@ -410,10 +410,10 @@ PeaZip
 
 [save history of recent directories]
 <none>
+/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads/
 /Users/will/
 /Volumes/Data/Games/CrossOver/
 /Users/will/Downloads/
-
 
 
 

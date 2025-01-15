@@ -41,6 +41,35 @@
         options = "--delete-older-than 30d";
     };
 
+    # Mac-Specific Fish Configuration
+    programs.fish = {
+        enable = true;
+        shellAliases = {
+            # Ties Tailscale to CLI in .app
+            tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
+            
+            # Rebuild Nix
+            nix-rebuild = "darwin-rebuild switch --flake ~/.dotfiles/nix/charon";
+            nrb = "nix-rebuild";
+
+            # Update Nix
+            nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
+            nup = "nix-update";
+        };
+    };
+
+    environment.variables = {
+        CHARON_FLAKE_DIR = "$HOME/.dotfiles/nix/charon";
+        SSH_AUTH_SOCK="$HOME/.1password/agent.sock"; # 1Password SSH Agent
+        STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"; # Starship
+
+        # Volumes
+        VOLUMES_DIR="/Volumes";
+        CACHE="$VOLUMES_DIR/Cache";
+        DATA="$VOLUMES_DIR/Data";
+        DEVELOPER="$VOLUMES_DIR/Developer";
+    };
+
 
 
     #
@@ -145,8 +174,6 @@
             "bat-extras" # Additional features for bat
             "brew-cask-completion" # Fish completion for Homebrew Casks
             "docker-completion" # Shell completion for Docker
-            "fish" # Fish Shell
-            "fisher" # Fish Plugin Manager
             "powerlevel10k" # Powerlevel10k ZSH Theme
             "zsh-autosuggestions" # Fish-like autosuggestions for ZSH
             "zsh-lovers" # ZSH Plugin Collection

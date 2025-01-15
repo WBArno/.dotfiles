@@ -1,2 +1,4 @@
 .DS_Store
 utils/nvim/lazy-lock.json
+utils/peazip/rnd
+utils/peazip/conf-lastgood.txt
