@@ -43,11 +43,11 @@
 
     # Mac-Specific Fish Configuration
     programs.fish.enable = true;
-    programs.zsh = {
-        enable = true;
+    programs.zsh.enable = true; #= {
+        #enable = true;
         # Enable Powerlevel10k Theme
-        promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme && source ~/.config/zsh/p10k.zsh";
-    };
+        #promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme && source ~/.config/zsh/p10k.zsh";
+    #};
 
     environment.variables = {
         CHARON_FLAKE_DIR = "$HOME/.dotfiles/nix/charon";
@@ -73,6 +73,11 @@
         nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
         nup = "nix-update";
     };
+
+    # Extra commands to run on init regardless of shell
+    environment.extraInit = ''
+    
+    '';
 
 
 

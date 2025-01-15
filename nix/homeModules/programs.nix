@@ -14,11 +14,24 @@
     enableNushellIntegration = true;
     icons = "auto";
   };
+  bat = {
+    enable = true;
+    extraPackages = with pkgs.bat-extras; [
+      batdiff # Diff with bat
+      batman # Man with bat
+      batpipe # Pipe with bat
+      batgrep # Grep with bat
+      batwatch # Watch with bat
+      prettybat # Pretty print with bat
+    ];
+    config = {
+      theme = "Nord";
+    };
+  };
 
   # Unconfigured Packages
   aria2.enable = true;
   # atuin.enable = true;
-  bat.enable = true;
   fastfetch.enable = true;
   fd.enable = true;
   fzf.enable = true;

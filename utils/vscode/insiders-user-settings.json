@@ -13,7 +13,7 @@
     "git.confirmSync": false,
     "terminal.explorerKind": "external",
     "terminal.integrated.defaultProfile.osx": "fish",
-    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.external.osxExec": "iTerm.app",
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "catppuccin-macchiato",
@@ -30,5 +30,34 @@
     "git.enableSmartCommit": true,
     "github.gitProtocol": "ssh",
     "dotfiles.repository": "https://github.com/wbarno/.dotfiles.git",
-    "dotfiles.targetPath": "~/.dotfiles"
+    "dotfiles.targetPath": "~/.dotfiles",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "nix.enableLanguageServer": true,
+    "nix.serverSettings": {
+        
+
+        // settings for 'nixd' LSP
+        "nixd": {
+            "formatting": {
+                // This is the default if ommited.
+                "command": [ "nixfmt" ]
+            },
+            "options": {
+                // By default, this entriy will be read from `import <nixpkgs> { }`
+                // You can write arbitary nix expression here, to produce valid "options" declaration result.
+                // Tip: for flake-based configuration, utilize `builtins.getFlake`
+                "nixos": {
+                    "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix/Charon\").nixosConfigurations.charon.options"
+                },
+                "home-manager": {
+                    "expr": "(builtins.getFlake \"/Users/will/.dotfiles/nix\").homeConfigurations.will@charon.options"
+                }
+            }
+        }
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
