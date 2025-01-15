@@ -42,20 +42,11 @@
     };
 
     # Mac-Specific Fish Configuration
-    programs.fish = {
+    programs.fish.enable = true;
+    programs.zsh = {
         enable = true;
-        shellAliases = {
-            # Ties Tailscale to CLI in .app
-            tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
-            
-            # Rebuild Nix
-            nix-rebuild = "darwin-rebuild switch --flake ~/.dotfiles/nix/charon";
-            nrb = "nix-rebuild";
-
-            # Update Nix
-            nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
-            nup = "nix-update";
-        };
+        # Enable Powerlevel10k Theme
+        promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme && source ~/.config/zsh/p10k.zsh";
     };
 
     environment.variables = {
@@ -68,6 +59,19 @@
         CACHE="$VOLUMES_DIR/Cache";
         DATA="$VOLUMES_DIR/Data";
         DEVELOPER="$VOLUMES_DIR/Developer";
+    };
+
+    environment.shellAliases = {
+        # Ties Tailscale to CLI in .app
+        tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
+            
+        # Rebuild Nix
+        nix-rebuild = "darwin-rebuild switch --flake ~/.dotfiles/nix/charon";
+        nrb = "nix-rebuild";
+
+        # Update Nix
+        nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
+        nup = "nix-update";
     };
 
 
@@ -95,7 +99,7 @@
         aria2 # Better download manager
         fastfetch # NeoFetch but fast (and still updated)
         neovim # Semi-modern iteration of vim
-        starship # Cross-Shell Prompt Customization
+        # starship # Cross-Shell Prompt Customization
         aerospace # Window Manager
         bat # Better cat
         fzf # Fuzzy Finder
@@ -171,13 +175,8 @@
 
         taps = [];
         brews = [
-            "bat-extras" # Additional features for bat
             "brew-cask-completion" # Fish completion for Homebrew Casks
             "docker-completion" # Shell completion for Docker
-            "powerlevel10k" # Powerlevel10k ZSH Theme
-            "zsh-autosuggestions" # Fish-like autosuggestions for ZSH
-            "zsh-lovers" # ZSH Plugin Collection
-            "zsh-syntax-highlighting" # Fish-like syntax highlighting for ZSH
         ];
         casks = [
             "1password-cli@beta" # Password Manager CLI

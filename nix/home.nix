@@ -3,7 +3,7 @@
 
 {
   # Home Manager Program Management 
-  programs = import ./homeModules/programs.nix { inherit pkgs config; };
+  programs = import ./homeModules/programs.nix { inherit pkgs; };
   
   # Do not change this!
   home = {
@@ -16,6 +16,9 @@
         fishPlugins.bass
         fishPlugins.pisces
         fishPlugins.sponge
+
+        # Zsh Plugins
+        zsh-powerlevel10k
 
         # Bat Extras
         bat-extras.batgrep
@@ -76,6 +79,34 @@
       DOT_UTILS="$DOTFILES/utils";
 
       #EDITOR=code-insiders;
+    };
+    
+    # Shell Aliases
+    shellAliases = {
+      # Replaces ls with eza
+      ls = "${pkgs.eza}/bin/eza";
+    
+      # Replaces cd with zOxide
+      cd = "${pkgs.zoxide}/bin/zoxide";
+
+      # Makes aria/wget less annoying
+      aria = "${pkgs.aria2}/bin/aria2c";
+      wget = "${pkgs.wget2}/bin/wget2";
+
+      # Foreground ClamAV scan
+      clamav = "${pkgs.clamav}/bin/clamd --foreground";
+
+      # Normalize VSCode Call
+      code = "/usr/local/bin/code-insiders";
+
+      # Use bat instead of cat or man
+      cat = "${pkgs.bat}/bin/bat";
+      man = "${pkgs.bat-extras.batman}/bin/batman";
+      grep = "${pkgs.bat-extras.batgrep}/bin/batgrep";
+      diff = "${pkgs.bat-extras.batdiff}/bin/batdiff";
+      watch = "${pkgs.bat-extras.batwatch}/bin/batwatch";
+      pipe = "${pkgs.bat-extras.batpipe}/bin/batpipe";
+      pretty = "${pkgs.bat-extras.prettybat}/bin/prettybat";
     };
   };
 }
