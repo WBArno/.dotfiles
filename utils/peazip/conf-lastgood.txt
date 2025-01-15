@@ -84,7 +84,7 @@ default.txt
 
 [save history of recent archives]
 1
-/Users/will/ICCIT.7z
+
 
 
 
