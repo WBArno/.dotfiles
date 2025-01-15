@@ -87,7 +87,8 @@
       ls = "${pkgs.eza}/bin/eza";
     
       # Replaces cd with zOxide
-      cd = "${pkgs.zoxide}/bin/zoxide";
+      #cd = "${pkgs.zoxide}/bin/zoxide";
+      cd = "z";
 
       # Makes aria/wget less annoying
       aria = "${pkgs.aria2}/bin/aria2c";
