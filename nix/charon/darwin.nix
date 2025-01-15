@@ -100,31 +100,27 @@
 
         # Command-Line Utilities
         p7zip # 7-Zip Compression
-        wget2 # At least it's not curl
-        aria2 # Better download manager
-        fastfetch # NeoFetch but fast (and still updated)
         neovim # Semi-modern iteration of vim
         # starship # Cross-Shell Prompt Customization
         aerospace # Window Manager
-        bat # Better cat
-        fzf # Fuzzy Finder
-        fd # Better find
-        zoxide # Better cd
-        eza # Better ls
-        mas # Mac App Store CLI
+        # fzf # Fuzzy Finder
+        # fd # Better find
+        # zoxide # Better cd
+        # eza # Better ls
+        # mas # Mac App Store CLI
         lazygit # Git TUI
         lazydocker # Docker TUI
-        yazi # TUI File Manager
+        # yazi # TUI File Manager
         mc # Midnight Commander
-        ripgrep # Better grep
+        # ripgrep # Better grep
         m-cli # macOS Command Line Tools
         nh # Nix Helper
         coreutils # GNU Core Utilities
 
         # Terminal Emulators
         wezterm
-        # ghostty
         tmux # Terminal Multiplexer
+        zellij # Another Multiplexer
         #iterm2 # Terminal Emulator
         meslo-lgs-nf # Nerd Font for Terminal
 
@@ -132,7 +128,7 @@
         python313 # Python 3.13
         pipx # Python Package Manager
         jre # Java Runtime Environment
-        dotnet-sdk # .NET SDK
+        # dotnet-sdk # .NET SDK
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
@@ -145,13 +141,12 @@
         # Utils
         xquartz # X11 for macOS
         clamav # Antivirus
-        arc-browser # Swift Web Browser
+        # arc-browser # Swift Web Browser
         istatmenus # System Monitoring
         bartender # Menu Bar Organizer
         raycast # Spotlight Replacement
         tigervnc # VNC Client
         libreoffice-bin # Office Suite
-        #rpi-imager # Raspberry Pi Imager
 
         # Emu/Virt
         dosbox-x # DOS Emulator
@@ -181,6 +176,7 @@
         taps = [];
         brews = [
             "brew-cask-completion" # Fish completion for Homebrew Casks
+            "colima" # Container Alternative for MacOS
             "docker-completion" # Shell completion for Docker
         ];
         casks = [
@@ -211,6 +207,7 @@
             "openrct2" # RollerCoaster Tycoon 2 Reimplementation
             "playcover-community" # Unsupported iOS Game Launcher
             "powershell@preview" # PowerShell Core
+            "rancher" # Rancher-Desktop
             "raspberry-pi-imager" # Raspberry Pi OS Imager
             "remote-desktop-manager" # Remote Desktop Manager
             "shattered-pixel-dungeon" # Pixel Dungeon Traditional Roguelike
