@@ -22,8 +22,6 @@
 
         # Utilities
         wget2
-        ripgrep
-        yazi
         nixd
         nil
     ];

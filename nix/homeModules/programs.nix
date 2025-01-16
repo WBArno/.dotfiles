@@ -28,6 +28,10 @@
       theme = "Nord";
     };
   };
+  yazi = {
+    enable = true;
+    #flavors = pkgs.catppuccin;
+  };
 
   # Unconfigured Packages
   aria2.enable = true;
@@ -36,5 +40,6 @@
   fd.enable = true;
   fzf.enable = true;
   git.enable = true;
+  ripgrep.enable = true;
   zoxide.enable = true;
 }

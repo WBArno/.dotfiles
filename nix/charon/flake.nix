@@ -19,7 +19,7 @@
     };
   };
 
-  outputs = {  nix-darwin, mac-app-util, home-manager }:
+  outputs = {  self, nixpkgs, nix-darwin, mac-app-util, home-manager }:
   {
     # Nix-Darwin Config
     darwinConfigurations."charon" = nix-darwin.lib.darwinSystem {

@@ -43,11 +43,7 @@
 
     # Mac-Specific Fish Configuration
     programs.fish.enable = true;
-    programs.zsh.enable = true; #= {
-        #enable = true;
-        # Enable Powerlevel10k Theme
-        #promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme && source ~/.config/zsh/p10k.zsh";
-    #};
+    programs.zsh.enable = true;
 
     environment.variables = {
         CHARON_FLAKE_DIR = "$HOME/.dotfiles/nix/charon";
@@ -74,11 +70,6 @@
         nup = "nix-update";
     };
 
-    # Extra commands to run on init regardless of shell
-    environment.extraInit = ''
-    
-    '';
-
 
 
     #
@@ -95,24 +86,13 @@
     ## System Packages
     #
     environment.systemPackages = with pkgs; [
-        # Shells
-        nushell
-
         # Command-Line Utilities
         p7zip # 7-Zip Compression
         neovim # Semi-modern iteration of vim
-        # starship # Cross-Shell Prompt Customization
-        aerospace # Window Manager
-        # fzf # Fuzzy Finder
-        # fd # Better find
-        # zoxide # Better cd
-        # eza # Better ls
-        # mas # Mac App Store CLI
+
         lazygit # Git TUI
         lazydocker # Docker TUI
-        # yazi # TUI File Manager
         mc # Midnight Commander
-        # ripgrep # Better grep
         m-cli # macOS Command Line Tools
         nh # Nix Helper
         coreutils # GNU Core Utilities
@@ -141,7 +121,6 @@
         # Utils
         xquartz # X11 for macOS
         clamav # Antivirus
-        # arc-browser # Swift Web Browser
         istatmenus # System Monitoring
         bartender # Menu Bar Organizer
         raycast # Spotlight Replacement
@@ -189,12 +168,10 @@
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "docker" # Containerization Desktop Client
-            "firefox" # Web Browser
             "forklift" # SFTP File Manager
             "fs-uae" # Amiga Emulator
             "fs-uae-launcher" # Amiga Emulator Frontend
             "ghidra" # Reverse Engineering Tool
-            "ghostty" # Terminal Emulator
             "gog-galaxy" # Good Old Games Client
             "gzdoom" # Doom Source Port
             "hammerspoon" # MacOS Automation Tool
@@ -202,12 +179,11 @@
             "iterm2@beta" # Terminal Emulator
             "microsoft-edge" # Web Browser
             "obs" # Screen Recording Software
-            "obsidian" # Markdown-based Note-Taking App
             "ollama" # Large Language Model Server
             "openrct2" # RollerCoaster Tycoon 2 Reimplementation
             "playcover-community" # Unsupported iOS Game Launcher
             "powershell@preview" # PowerShell Core
-            "rancher" # Rancher-Desktop
+            #"rancher" # Rancher-Desktop
             "raspberry-pi-imager" # Raspberry Pi OS Imager
             "remote-desktop-manager" # Remote Desktop Manager
             "shattered-pixel-dungeon" # Pixel Dungeon Traditional Roguelike
