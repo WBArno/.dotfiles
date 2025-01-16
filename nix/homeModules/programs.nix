@@ -6,15 +6,15 @@
   home-manager.enable = true;
 
   # Configured Packages
-  fish = import ./fish.nix { inherit pkgs; };
-  zsh = import ./zsh.nix { inherit pkgs; };
-  eza = {
+  fish = import ./fish.nix { inherit pkgs; }; # Fish Shell
+  zsh = import ./zsh.nix { inherit pkgs; }; # Zsh Shell
+  eza = { # Better ls
     enable = true;
     colors = "auto";
     enableNushellIntegration = true;
     icons = "auto";
   };
-  bat = {
+  bat = { # Better Cat
     enable = true;
     extraPackages = with pkgs.bat-extras; [
       batdiff # Diff with bat
@@ -28,7 +28,18 @@
       theme = "Nord";
     };
   };
-  yazi = {
+  gh = { # Github CLI
+      enable = true;
+      gitCredentialHelper.enable = true;
+      settings.editor = "code-insiders";
+      extensions = with pkgs; [
+        gh-copilot
+        gh-notify
+        gh-screensaver
+        gh-dash
+      ];
+    };
+  yazi = { # Another Terminal File Browser
     enable = true;
     #flavors = pkgs.catppuccin;
   };

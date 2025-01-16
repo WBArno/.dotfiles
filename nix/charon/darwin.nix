@@ -42,7 +42,11 @@
     };
 
     # Mac-Specific Fish Configuration
-    programs.fish.enable = true;
+    programs.fish = {
+        enable = true;
+        useBabelfish = true;
+        babelfishPackage = pkgs.babelfish;
+    };
     programs.zsh.enable = true;
 
     environment.variables = {
@@ -112,9 +116,9 @@
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
-        docker # Containerization Client
-        docker-compose # Containerization Orchestration Tool
-        #ghidra
+        # docker # Containerization Client
+        # docker-compose # Containerization Orchestration Tool
+        ghidra-bin
         devbox # Development Environment
         exercism # Code Practice
 
@@ -147,19 +151,33 @@
     ];
 
 
-    homebrew = {
-        enable = true;
-        # Enable auto-uninstall of packages not listed here
-        onActivation.cleanup = "uninstall"; # "none";
 
-        taps = [
+    # TODO: Categorize programs listed here; split into its own .nix file
+    homebrew = { # Homebrew Package Manager
+        enable = true;
+
+        # Actions to take on nix rebuild
+        onActivation = {
+            autoUpdate = true; # Enable auto-update of Homebrew
+            upgrade = true; # Enable upgrade of packages
+            # Enable auto-uninstall of packages not listed here
+            cleanup = "uninstall"; 
+        };
+            
+        taps = [ # Brew Repositories
             "homebrew/services" # Service Management
         ];
-        brews = [
+
+        brews = [ # Formulae (CLI-Based Packages)
             "brew-cask-completion" # Fish completion for Homebrew Casks
             "docker-completion" # Shell completion for Docker
+            { # Colima Containers
+                name = "colima";
+                restart_service = "changed";
+            }
         ];
-        casks = [
+
+        casks = [ # GUI-Based Packages
             "1password-cli@beta" # Password Manager CLI
             "1password@beta" # Password Manager
             "balenaetcher" # USB Flashing Tool
@@ -184,7 +202,7 @@
             "openrct2" # RollerCoaster Tycoon 2 Reimplementation
             "playcover-community" # Unsupported iOS Game Launcher
             "powershell@preview" # PowerShell Core
-            #"rancher" # Rancher-Desktop
+            # "rancher" # Rancher-Desktop
             "raspberry-pi-imager" # Raspberry Pi OS Imager
             "remote-desktop-manager" # Remote Desktop Manager
             "shattered-pixel-dungeon" # Pixel Dungeon Traditional Roguelike
@@ -196,6 +214,7 @@
             "vmware-fusion" # Virtualization
             "xiv-on-mac" # Final Fantasy XIV Launcher
         ];
+
         masApps = { # Mac App Store Apps
             # Productivity
             Enchanted = 6474268307; # Enchanted Ollama UI

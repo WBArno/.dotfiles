@@ -12,10 +12,11 @@
     # List of packages to be installed/managed by HM
     packages = with pkgs; [ 
         # Fish Plugins
-        fishPlugins.tide
-        fishPlugins.bass
-        fishPlugins.pisces
-        fishPlugins.sponge
+        fishPlugins.tide # P10k-Style Shell
+        fishPlugins.bass # Bash Wrapper for Fish
+        fishPlugins.pisces # Paired Symbols
+        fishPlugins.sponge # History Cleaning
+        babelfish # Bash translator utility
 
         # Zsh Plugins
         zsh-powerlevel10k
@@ -42,6 +43,11 @@
       #".config/nvim".source = ../utils/nvim;
       #".config/peazip".source = ../utils/peazip;
     };
+
+    # Directories to add to PATH
+    sessionPath = [
+      #"$HOME/.rd/bin" # Rancher Desktop
+    ];
 
     # Environment Variables
     sessionVariables = { 
