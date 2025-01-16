@@ -152,10 +152,11 @@
         # Enable auto-uninstall of packages not listed here
         onActivation.cleanup = "uninstall"; # "none";
 
-        taps = [];
+        taps = [
+            "homebrew/services" # Service Management
+        ];
         brews = [
             "brew-cask-completion" # Fish completion for Homebrew Casks
-            "colima" # Container Alternative for MacOS
             "docker-completion" # Shell completion for Docker
         ];
         casks = [
