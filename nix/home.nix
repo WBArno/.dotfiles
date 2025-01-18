@@ -38,13 +38,13 @@
     # Dotfile Management
     file = {
       # Terminals
-      ".config/iterm2".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2;
-      ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink ../terminals/ghostty;
+      #".config/iterm2".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2;
+      #".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink ../terminals/ghostty;
 
       # Utils
-      ".config/1Password".source = config.lib.file.mkOutOfStoreSymlink ../utils/1Password;
-      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ../utils/nvim;
-      ".config/peazip".source = config.lib.file.mkOutOfStoreSymlink ../utils/peazip;
+      #".config/1Password".source = config.lib.file.mkOutOfStoreSymlink ../utils/1Password;
+      #".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ../utils/nvim;
+      #".config/peazip".source = config.lib.file.mkOutOfStoreSymlink ../utils/peazip;
     };
 
     # Directories to add to PATH
