@@ -171,10 +171,6 @@
         brews = [ # Formulae (CLI-Based Packages)
             "brew-cask-completion" # Fish completion for Homebrew Casks
             "docker-completion" # Shell completion for Docker
-            { # Colima Containers
-                name = "colima";
-                restart_service = "changed";
-            }
         ];
 
         casks = [ # GUI-Based Packages
@@ -196,6 +192,7 @@
             "hammerspoon" # MacOS Automation Tool
             "heroic" # Epic Games Store Downloader
             "iterm2@beta" # Terminal Emulator
+            "lunar" # External Monitor Brightness Tool
             "microsoft-edge" # Web Browser
             "obs" # Screen Recording Software
             "ollama" # Large Language Model Server
@@ -223,31 +220,40 @@
             iMovie = 408981434; # iMovie Video Editor
             Numbers = 409203825; # Numbers Spreadsheet
             Keynote = 409183694; # Keynote Presentation Software
+            "Microsoft Outlook" = 985367838; # Microsoft Outlook Email Client
+            Pluralsight = 431748264; # Pluralsight Learning Platform
 
             # Development
             # Xcode = 497799835; # Xcode IDE
             Playgrounds = 1496833156; # Swift Playgrounds
             Developer = 640199958; # Apple Developer News
+            Devhub = 6476452351; # Developer Utilities
+            "MQTT Explorer" = 1455214828; # MQTT Explorer
 
             # Network Utilities
             Speedtest = 1153157709; # Speedtest by Ookla
             Tailscale = 1475387142; # Tailscale VPN
             "Windows App" = 1295203466; # Windows Remote Desktop
             Surfshark = 1437809329; # Surfshark VPN
+            MyJD = 1203271558; # MyJDownloader Remote
 
             # Utils
             TestFlight = 899247664; # TestFlight Beta Testing
             # CrystalFetch = 6454431289; # CrystalFetch Image Downloader
             # "Home Assistant" = 1099568401; # Home Automation - USING TF BUILD
-            # "Okta Verify" = 490179405; # Okta 2FA
+            "Okta Verify" = 490179405; # Okta 2FA
+            Wyze = 1288415553; # Wyze Security Cameras
+            OctoPod = 1412557625; # OctoPrint Client
+
 
             # Safari Extensions
-            Wipr = 1662217862; # Wipr Ad Blocker
+           "Wipr 2" = 1662217862; # Wipr Ad Blocker
             "Baking Soda" = 1601151613; # Baking Soda Video Extractor
             DeArrow = 6451469297; # YouTube De-Clickbait Extension
             Vinegar = 1591303229; # Vinegar Video Extractor
             Hush = 1544743900; # Hush Nag Blocker
             SponsorBlock = 1573461917; # YouTube Sponsor Segment Blocker
+            "Raycast Companion" = 6738274497; # Raycast Extension
 
             # Games
             # "Football Manager 2024" = 1626267810; # Football Manager 2024

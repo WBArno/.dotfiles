@@ -7,7 +7,8 @@
     "remote.SSH.remotePlatform": {
         "unraid": "linux",
         "pihole.local": "linux",
-        "steamdeck.local": "linux"
+        "steamdeck.local": "linux",
+        "steamdeck": "linux"
     },
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -16,10 +17,10 @@
     "terminal.external.osxExec": "iTerm.app",
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.iconTheme": "catppuccin-latte",
     "workbench.colorTheme": "Catppuccin Frappé",
     "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-    "workbench.preferredLightColorTheme": "Nord",
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
     "window.autoDetectColorScheme": true,
     "window.zoomLevel": 1,
     "window.zoomPerWindow": false,
@@ -60,5 +61,10 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "nix.serverPath": "nixd"
+    "nix.serverPath": "nixd",
+    "catppuccin.accentColor": "blue",
+    "workbench.commandPalette.experimental.suggestCommands": true,
+    "workbench.experimental.cloudChanges.autoStore": "onShutdown",
+    "workbench.experimental.cloudChanges.partialMatches.enabled": true,
+    "catppuccin.colorOverrides": {}
 }

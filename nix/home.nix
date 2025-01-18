@@ -16,6 +16,8 @@
         fishPlugins.bass # Bash Wrapper for Fish
         fishPlugins.pisces # Paired Symbols
         fishPlugins.sponge # History Cleaning
+        fishPlugins.fifc # FZF Completion
+        fishPlugins.puffer # Text Expansions
         babelfish # Bash translator utility
 
         # Zsh Plugins

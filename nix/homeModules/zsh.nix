@@ -18,6 +18,8 @@
     source ~/.dotfiles/shells/zsh/p10k.zsh
     # Enable iTerm2 Shell Integration
     source ~/.iterm2_shell_integration.zsh
+    # Enable Copilot Aliases
+    eval "$(gh copilot alias -- zsh)"
     '';
 }
     
