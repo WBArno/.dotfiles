@@ -1,5 +1,5 @@
 # Main Home Manager Config
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # Home Manager Program Management 
@@ -25,25 +25,26 @@
 
         # Utilities
         wget2
+        btop
         nixd
         nil
+        xxh
+
+        # Fun
+        yt-dlp
+        cmatrix
     ];
 
     # Dotfile Management
     file = {
-      # Shells
-      #".config/nushell".source = config.lib.file.mkOutOfStoreSymlink ../shells/nushell;
-
-
       # Terminals
-      #".config/ghostty".source = ../terminals/ghostty;
-
+      ".config/iterm2/com.googlecode.iterm2.plist".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2.plist;
+      ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink ../terminals/ghostty;
 
       # Utils
-      #".config/1Password".source = ../utils/1Password;
-      #".config/aerospace".source = ../utils/aerospace;
-      #".config/nvim".source = ../utils/nvim;
-      #".config/peazip".source = ../utils/peazip;
+      ".config/1Password".source = config.lib.file.mkOutOfStoreSymlink ../utils/1Password;
+      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ../utils/nvim;
+      ".config/peazip".source = config.lib.file.mkOutOfStoreSymlink ../utils/peazip;
     };
 
     # Directories to add to PATH
@@ -66,7 +67,7 @@
       DOT_TERMINAL="$DOTFILES/terminals";
       DOT_UTILS="$DOTFILES/utils";
 
-      #EDITOR=code-insiders;
+      EDITOR="code-insiders"; # Default Editor
     };
 
     # Shell Aliases
@@ -75,7 +76,6 @@
       ls = "${pkgs.eza}/bin/eza --color=auto --icons=auto";
     
       # Replaces cd with zOxide
-      #cd = "${pkgs.zoxide}/bin/zoxide";
       cd = "z";
 
       # Makes aria/wget less annoying

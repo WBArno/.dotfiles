@@ -57,22 +57,11 @@ declare -A links=(
   ["$HOME/.dotfiles/shells/fish/conf.d"]="$HOME/.config/fish/conf.d"
   
   # Terminals
-  ["$HOME/.dotfiles/terminals/starship"]="$HOME/.config/starship"
   ["$HOME/.dotfiles/terminals/tmux.conf"]="$HOME/.tmux.conf"
   
   # Utils
-
   ["$HOME/.dotfiles/utils/nvim"]="$HOME/.config/nvim"
   ["$HOME/.dotfiles/utils/peazip"]="$HOME/.config/peazip"
-  ["$HOME/.dotfiles/utils/yazi/keymap.toml"]="$HOME/.config/yazi/keymap.toml"
-  ["$HOME/.dotfiles/utils/yazi/package.toml"]="$HOME/.config/yazi/package.toml"
-  ["$HOME/.dotfiles/utils/yazi/theme.toml"]="$HOME/.config/yazi/theme.toml"
-  ["$HOME/.dotfiles/utils/yazi/yazi.toml"]="$HOME/.config/yazi/yazi.toml"
-  ["$HOME/.dotfiles/utils/bat"]="$HOME/.config/bat"
-
-
-  # Environment Variables
-  ["$HOME/.dotfiles/shells/environment_variables.sh"]="$HOME/.config/env.sh"
 )
 
 # Create symbolic links
