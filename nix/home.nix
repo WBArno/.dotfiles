@@ -38,7 +38,7 @@
     # Dotfile Management
     file = {
       # Terminals
-      ".config/iterm2/com.googlecode.iterm2.plist".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2.plist;
+      ".config/iterm2".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2;
       ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink ../terminals/ghostty;
 
       # Utils

@@ -66,5 +66,8 @@
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.experimental.cloudChanges.autoStore": "onShutdown",
     "workbench.experimental.cloudChanges.partialMatches.enabled": true,
-    "catppuccin.colorOverrides": {}
+    "catppuccin.colorOverrides": {},
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

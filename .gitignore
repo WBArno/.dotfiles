@@ -2,3 +2,5 @@
 utils/nvim/lazy-lock.json
 utils/peazip/rnd
 utils/peazip/conf-lastgood.txt
+terminals/iterm2/AppSupport
+terminals/iterm2/sockets/*
