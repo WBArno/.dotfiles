@@ -146,7 +146,6 @@
         cataclysm-dda-git # Cataclysm: Dark Days Ahead Traditional Roguelike
         crawl # Dungeon Crawl Stone Soup
         prismlauncher # Minecraft launcher
-        gogdl # GOG Downloader for Heroic
         moonlight-qt # Game Streaming Client
     ];
 
@@ -176,10 +175,13 @@
         casks = [ # GUI-Based Packages
             "1password-cli@beta" # Password Manager CLI
             "1password@beta" # Password Manager
+            "applite" # Brew GUI
+            "ariang" # Aria2 Web Interface
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
             "brewlet" # Homebrew Dock Icon
+            "cork" # Homebrew GUI
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "docker" # Containerization Desktop Client
@@ -192,14 +194,12 @@
             "hammerspoon" # MacOS Automation Tool
             "heroic" # Epic Games Store Downloader
             "iterm2@beta" # Terminal Emulator
-            "lunar" # External Monitor Brightness Tool
             "microsoft-edge" # Web Browser
             "obs" # Screen Recording Software
             "ollama" # Large Language Model Server
             "openrct2" # RollerCoaster Tycoon 2 Reimplementation
             "playcover-community" # Unsupported iOS Game Launcher
             "powershell@preview" # PowerShell Core
-            # "rancher" # Rancher-Desktop
             "raspberry-pi-imager" # Raspberry Pi OS Imager
             "remote-desktop-manager" # Remote Desktop Manager
             "shattered-pixel-dungeon" # Pixel Dungeon Traditional Roguelike
@@ -209,6 +209,7 @@
             "ultimaker-cura" # 3D Printer Slicer
             "visual-studio-code@insiders" # Code Editor
             "vmware-fusion" # Virtualization
+            "warp" # WARP Terminal Emulator
             "xiv-on-mac" # Final Fantasy XIV Launcher
         ];
 

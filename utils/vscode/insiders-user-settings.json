@@ -17,7 +17,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "catppuccin-latte",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "workbench.colorTheme": "Catppuccin Frappé",
     "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
@@ -69,5 +69,6 @@
     "catppuccin.colorOverrides": {},
     "[dockercompose]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "github.copilot.chat.search.semanticTextResults": true
 }

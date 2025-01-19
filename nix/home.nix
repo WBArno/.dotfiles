@@ -14,10 +14,11 @@
         # Fish Plugins
         fishPlugins.tide # P10k-Style Shell
         fishPlugins.bass # Bash Wrapper for Fish
-        fishPlugins.pisces # Paired Symbols
+        fishPlugins.autopair # Paired Symbols
         fishPlugins.sponge # History Cleaning
         fishPlugins.fifc # FZF Completion
         fishPlugins.puffer # Text Expansions
+        fishPlugins.github-copilot-cli-fish # Copilot Aliases
         babelfish # Bash translator utility
 
         # Zsh Plugins
@@ -25,13 +26,11 @@
 
         # Utilities
         wget2
-        btop
         nixd
         nil
         xxh
 
         # Fun
-        yt-dlp
         cmatrix
     ];
 

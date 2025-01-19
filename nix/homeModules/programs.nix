@@ -43,14 +43,28 @@
     enable = true;
     #flavors = pkgs.catppuccin;
   };
-
+  aria2 = { # Aria2 Download Manager
+    enable = true;
+    settings = {
+      # downloadDir = "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads";
+      max-concurrent-downloads = 16;
+      max-connection-per-server = 4;
+      split = 16;
+      uri-selector = "adaptive";
+      file-allocation = "falloc";
+    };
+  };
   # Unconfigured Packages
-  aria2.enable = true;
   # atuin.enable = true;
-  fastfetch.enable = true;
-  fd.enable = true;
-  fzf.enable = true;
-  git.enable = true;
-  ripgrep.enable = true;
-  zoxide.enable = true;
+  btop.enable = true; # Better Top
+  fastfetch.enable = true; # NeoFetch 2.0
+  fd.enable = true; # Find CLI
+  fzf.enable = true; # Fuzzy Finder
+  git.enable = true; # Git CLI
+  lazygit.enable = true; # Git TUI
+  navi.enable = true; # Interactive Cheatsheet
+  ripgrep.enable = true; # Better Grep
+  thefuck.enable = true; # Correct Mistyped Commands
+  yt-dlp.enable = true; # YouTube Downloader
+  zoxide.enable = true; # Directory Jumper
 }
