@@ -47,13 +47,31 @@
     enable = true;
     settings = {
       # downloadDir = "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads";
-      max-concurrent-downloads = 16;
-      max-connection-per-server = 4;
-      split = 16;
+      continue = "true";
+      max-concurrent-downloads = 8;
+      max-connection-per-server = 16;
+      split = 10;
+      #min-split-size = "2048M";
       uri-selector = "adaptive";
       file-allocation = "falloc";
+      max-tries = "10";
+      timeout = "600";
     };
   };
+yt-dlp = { # YouTube Downloader
+    enable = true;
+    settings = {
+      downloadDir = "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads";
+      downloader = "aria2c";
+      downloader-options = "--continue --max-connection-per-server=4 --split=16";
+      format = "bestvideo+bestaudio/best";
+      merge-output-format = "mkv";
+      output = "%(title)s.%(ext)s";
+      sponsorblock-mark = "all";
+      sponsorblock-remove = "sponsor, selfpromo, interaction, music_offtopic";
+    };
+  };
+
   # Unconfigured Packages
   # atuin.enable = true;
   btop.enable = true; # Better Top
@@ -65,6 +83,5 @@
   navi.enable = true; # Interactive Cheatsheet
   ripgrep.enable = true; # Better Grep
   thefuck.enable = true; # Correct Mistyped Commands
-  yt-dlp.enable = true; # YouTube Downloader
   zoxide.enable = true; # Directory Jumper
 }

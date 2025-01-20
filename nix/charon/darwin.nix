@@ -176,12 +176,10 @@
             "1password-cli@beta" # Password Manager CLI
             "1password@beta" # Password Manager
             "applite" # Brew GUI
-            "ariang" # Aria2 Web Interface
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
             "brewlet" # Homebrew Dock Icon
-            "cork" # Homebrew GUI
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "docker" # Containerization Desktop Client
@@ -189,9 +187,7 @@
             "fs-uae" # Amiga Emulator
             "fs-uae-launcher" # Amiga Emulator Frontend
             "ghidra" # Reverse Engineering Tool
-            "gog-galaxy" # Good Old Games Client
             "gzdoom" # Doom Source Port
-            "hammerspoon" # MacOS Automation Tool
             "heroic" # Epic Games Store Downloader
             "iterm2@beta" # Terminal Emulator
             "microsoft-edge" # Web Browser
