@@ -72,6 +72,10 @@
         # Update Nix
         nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
         nup = "nix-update";
+
+        # Nix Search
+        nix-search = "nix search nixpkgs";
+        ns = "nix-search";
     };
 
 
@@ -101,6 +105,8 @@
         nh # Nix Helper
         coreutils # GNU Core Utilities
 
+        aichat # AI Chat for Terminal
+
         # Terminal Emulators
         wezterm
         tmux # Terminal Multiplexer
@@ -121,6 +127,7 @@
         ghidra-bin
         devbox # Development Environment
         exercism # Code Practice
+        uv # Python Package Manager
 
         # Utils
         xquartz # X11 for macOS
@@ -170,6 +177,7 @@
         brews = [ # Formulae (CLI-Based Packages)
             "brew-cask-completion" # Fish completion for Homebrew Casks
             "docker-completion" # Shell completion for Docker
+            "posting" # 
         ];
 
         casks = [ # GUI-Based Packages
@@ -182,7 +190,6 @@
             "brewlet" # Homebrew Dock Icon
             "crossover" # Windows Emulator
             "discord" # Chat Client
-            "docker" # Containerization Desktop Client
             "forklift" # SFTP File Manager
             "fs-uae" # Amiga Emulator
             "fs-uae-launcher" # Amiga Emulator Frontend
@@ -194,6 +201,7 @@
             "obs" # Screen Recording Software
             "ollama" # Large Language Model Server
             "openrct2" # RollerCoaster Tycoon 2 Reimplementation
+            "orbstack" # Orbstack VM/Container Manager
             "playcover-community" # Unsupported iOS Game Launcher
             "powershell@preview" # PowerShell Core
             "raspberry-pi-imager" # Raspberry Pi OS Imager

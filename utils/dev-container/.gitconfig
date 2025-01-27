@@ -1,0 +1,8 @@
+[user]
+	name = Will
+	email = mail@williamarnold.info
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINbDFAMLhLRdsGFGQN54gij0nUpZQxCWwTCIZa4lbjo8
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

@@ -27,8 +27,7 @@
         # Utilities
         wget2
         nixd
-        nil
-        xxh
+        devenv
 
         # Fun
         cmatrix

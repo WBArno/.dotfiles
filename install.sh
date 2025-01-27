@@ -2,34 +2,6 @@
 # Primarily For use in VSCode devcontainers
 
 # Set temporary settings for config locations before linking
-#export XDG_CONFIG_HOME=~/.config
-#export USER_CONFIG=~/.dotfiles
-
-
-# Shells
-#ln -s ~/.dotfiles/shells/zsh/zshrc ~/.zshrc
-#ln -s ~/.dotfiles/shells/zsh ~/.config/zsh
-#ln -s ~/.dotfiles/shells/fish/config.fish ~/.config/fish/config.fish
-#ln -s ~/.dotfiles/shells/fish/conf.d ~/.config/fish/conf.d
-
-# Terminals
-#ln -s ~/.dotfiles/terminals/starship ~/.config/starship
-#ln -s ~/.dotfiles/terminals/tmux.conf ~/.tmux.conf
-
-# Utils
-#ln -s ~/.dotfiles/utils/aerospace ~/.config/aerospace
-#ln -s ~/.dotfiles/utils/nvim ~/.config/nvim
-#ln -s ~/.dotfiles/utils/peazip ~/.config/peazip
-#ln -s ~/.dotfiles/utils/yazi/keymap.toml ~/.config/yazi/keymap.toml
-#ln -s ~/.dotfiles/utils/yazi/package.toml ~/.config/yazi/package.toml
-#ln -s ~/.dotfiles/utils/yazi/theme.toml ~/.config/yazi/theme.toml
-#ln -s ~/.dotfiles/utils/yazi/yazi.toml ~/.config/yazi/yazi.toml
-#ln -s ~/.dotfiles/utils/bat ~/.config/bat
-
-#!/bin/bash
-# Primarily For use in VSCode devcontainers
-
-# Set temporary settings for config locations before linking
 export XDG_CONFIG_HOME=$HOME/.config
 export USER_CONFIG=$HOME/.dotfiles
 

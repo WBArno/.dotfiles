@@ -63,7 +63,6 @@ yt-dlp = { # YouTube Downloader
     settings = {
       downloadDir = "/Users/will/Library/Mobile Documents/com~apple~CloudDocs/Downloads";
       downloader = "aria2c";
-      downloader-options = "--continue --max-connection-per-server=4 --split=16";
       format = "bestvideo+bestaudio/best";
       merge-output-format = "mkv";
       output = "%(title)s.%(ext)s";
