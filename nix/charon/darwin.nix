@@ -108,8 +108,6 @@
         aichat # AI Chat for Terminal
 
         # Terminal Emulators
-        wezterm
-        tmux # Terminal Multiplexer
         zellij # Another Multiplexer
         #iterm2 # Terminal Emulator
         meslo-lgs-nf # Nerd Font for Terminal
@@ -150,7 +148,7 @@
         vlc-bin # Media Player
 
         # Games
-        cataclysm-dda-git # Cataclysm: Dark Days Ahead Traditional Roguelike
+        # cataclysm-dda-git # Cataclysm: Dark Days Ahead Traditional Roguelike
         crawl # Dungeon Crawl Stone Soup
         prismlauncher # Minecraft launcher
         moonlight-qt # Game Streaming Client
@@ -176,6 +174,7 @@
 
         brews = [ # Formulae (CLI-Based Packages)
             "brew-cask-completion" # Fish completion for Homebrew Casks
+            "cataclysm" # Cataclysm: Dark Days Ahead Traditional Roguelike
             "docker-completion" # Shell completion for Docker
             "posting" # 
         ];
@@ -187,7 +186,6 @@
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
-            "brewlet" # Homebrew Dock Icon
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "forklift" # SFTP File Manager

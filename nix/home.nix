@@ -38,7 +38,8 @@
       # Terminals
       #".config/iterm2".source = config.lib.file.mkOutOfStoreSymlink ../terminals/iterm2;
       #".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink ../terminals/ghostty;
-
+      ".config/wezterm/wuake.lua".source =  ../terminals/wezterm/wuake.lua;
+      
       # Utils
       #".config/1Password".source = config.lib.file.mkOutOfStoreSymlink ../utils/1Password;
       #".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ../utils/nvim;

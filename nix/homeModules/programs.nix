@@ -70,6 +70,42 @@ yt-dlp = { # YouTube Downloader
       sponsorblock-remove = "sponsor, selfpromo, interaction, music_offtopic";
     };
   };
+wezterm = { # Terminal Emulator
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    extraConfig = ''
+      local wezterm = require 'wezterm'
+      local config = wezterm.config_builder()
+
+      require("wuake").setup {
+        config = config,
+      }
+      
+      return {
+        adjust_window_size_when_changing_font_size = false,
+        -- color_scheme = "Nord",
+        color_scheme = "Catppuccin Macciatto",
+        enable_tab_bar = true,
+        font_size = 16.0,
+        font = wezterm.font("Operator Mono SSm"),
+        macos_window_background_blur = 40,
+
+        window_background_opacity = 0.78,
+
+        window_decorations = 'RESIZE',
+
+        mouse_bindings = {
+          -- Ctrl-click will open the link under the mouse cursor
+          {
+            event = { Up = { streak = 1, button = 'Left' } },
+            mods = 'CTRL',
+            action = wezterm.action.OpenLinkAtMouseCursor,
+          },
+        },
+      }
+  '';
+};
 
   # Unconfigured Packages
   # atuin.enable = true;
@@ -83,4 +119,5 @@ yt-dlp = { # YouTube Downloader
   ripgrep.enable = true; # Better Grep
   thefuck.enable = true; # Correct Mistyped Commands
   zoxide.enable = true; # Directory Jumper
+  tmux.enable = true; # Terminal Multiplexer
 }
