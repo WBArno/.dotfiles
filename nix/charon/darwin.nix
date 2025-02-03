@@ -177,7 +177,6 @@
 
         brews = [ # Formulae (CLI-Based Packages)
             "brew-cask-completion" # Fish completion for Homebrew Casks
-            "cataclysm" # Cataclysm: Dark Days Ahead Traditional Roguelike
             "docker-completion" # Shell completion for Docker
             "posting" # 
         ];
