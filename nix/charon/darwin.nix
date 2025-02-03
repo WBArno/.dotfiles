@@ -115,8 +115,11 @@
         # Languages
         python313 # Python 3.13
         pipx # Python Package Manager
-        jre # Java Runtime Environment
-        # dotnet-sdk # .NET SDK
+
+        # Minecraft Java Builds
+        zulu # JDK21 (MC >= 1.19.2)
+        zulu8 # JDK8 (MC < 1.16.5)
+        zulu17 # JDK17 (MC 1.16.5 - 1.19.1)
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
