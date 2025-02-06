@@ -119,7 +119,7 @@
         # Minecraft Java Builds
         zulu # JDK21 (MC >= 1.19.2)
         zulu8 # JDK8 (MC < 1.16.5)
-        zulu17 # JDK17 (MC 1.16.5 - 1.19.1)
+        #zulu17 # JDK17 (MC 1.16.5 - 1.19.1)
 
         # Development Tools
         arduino-cli # CLI Tools for Arduino
@@ -173,6 +173,7 @@
             
         taps = [ # Brew Repositories
             "homebrew/services" # Service Management
+            "MCJack123/CraftOSPC" # CraftOS-PC Custom Repo
         ];
 
         brews = [ # Formulae (CLI-Based Packages)
@@ -188,6 +189,7 @@
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
+            "mcjack123/craftospc/craftos-pc-accelerated" # ComputerCraft PC Emulator
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "forklift" # SFTP File Manager
@@ -236,11 +238,13 @@
             "MQTT Explorer" = 1455214828; # MQTT Explorer
 
             # Network Utilities
+            NeoServer = 6448362669; # Server Controller
             Speedtest = 1153157709; # Speedtest by Ookla
             Tailscale = 1475387142; # Tailscale VPN
             "Windows App" = 1295203466; # Windows Remote Desktop
             Surfshark = 1437809329; # Surfshark VPN
             MyJD = 1203271558; # MyJDownloader Remote
+            Hoarder = 6479258022; # Selfhosted Bookmark Manager
 
             # Utils
             TestFlight = 899247664; # TestFlight Beta Testing
@@ -249,6 +253,7 @@
             "Okta Verify" = 490179405; # Okta 2FA
             Wyze = 1288415553; # Wyze Security Cameras
             OctoPod = 1412557625; # OctoPrint Client
+            "Commander One" = 1035236694; # Commander One File Manager
 
 
             # Safari Extensions
