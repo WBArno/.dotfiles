@@ -173,7 +173,6 @@
             
         taps = [ # Brew Repositories
             "homebrew/services" # Service Management
-            "MCJack123/CraftOSPC" # CraftOS-PC Custom Repo
         ];
 
         brews = [ # Formulae (CLI-Based Packages)
@@ -189,7 +188,6 @@
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
-            "mcjack123/craftospc/craftos-pc-accelerated" # ComputerCraft PC Emulator
             "crossover" # Windows Emulator
             "discord" # Chat Client
             "forklift" # SFTP File Manager
