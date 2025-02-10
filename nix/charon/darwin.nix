@@ -127,8 +127,12 @@
         # docker-compose # Containerization Orchestration Tool
         ghidra-bin
         devbox # Development Environment
-        exercism # Code Practice
-        uv # Python Package Manager
+        # exercism # Code Practice
+
+        # Kubernetes
+        kubernetes-helm # Kubernetes Package Manager
+        kind # Kubernetes in Docker
+        minikube # For VSCode Plugin
 
         # Utils
         xquartz # X11 for macOS
