@@ -194,7 +194,7 @@
             "betterdiscord-installer" # Discord Plugins
             "crossover" # Windows Emulator
             "discord" # Chat Client
-            "displaylink" # Thunderbolt Dock Drivers
+            # "displaylink" # Thunderbolt Dock Drivers
             "forklift" # SFTP File Manager
             "fs-uae" # Amiga Emulator
             "fs-uae-launcher" # Amiga Emulator Frontend
