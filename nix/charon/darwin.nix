@@ -189,6 +189,7 @@
             "1password-cli@beta" # Password Manager CLI
             "1password@beta" # Password Manager
             "applite" # Brew GUI
+            "ariang" # Aria2 User Interface
             "balenaetcher" # USB Flashing Tool
             "battle-net" # Blizzard Game Client
             "betterdiscord-installer" # Discord Plugins
@@ -237,7 +238,6 @@
             # Xcode = 497799835; # Xcode IDE
             Playgrounds = 1496833156; # Swift Playgrounds
             Developer = 640199958; # Apple Developer News
-            Devhub = 6476452351; # Developer Utilities
             "MQTT Explorer" = 1455214828; # MQTT Explorer
 
             # Network Utilities
@@ -245,9 +245,8 @@
             Speedtest = 1153157709; # Speedtest by Ookla
             Tailscale = 1475387142; # Tailscale VPN
             "Windows App" = 1295203466; # Windows Remote Desktop
-            Surfshark = 1437809329; # Surfshark VPN
             MyJD = 1203271558; # MyJDownloader Remote
-            Hoarder = 6479258022; # Selfhosted Bookmark Manager
+            "Hoarder App" = 6479258022; # Selfhosted Bookmark Manager
 
             # Utils
             TestFlight = 899247664; # TestFlight Beta Testing
@@ -257,7 +256,6 @@
             Wyze = 1288415553; # Wyze Security Cameras
             OctoPod = 1412557625; # OctoPrint Client
             "Commander One" = 1035236694; # Commander One File Manager
-
 
             # Safari Extensions
            "Wipr 2" = 1662217862; # Wipr Ad Blocker
