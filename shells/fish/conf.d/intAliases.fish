@@ -4,7 +4,7 @@ if status is-interactive
     alias tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     
     # Replaces ls with eza
-    alias ls "eza --icons=auto"
+    alias ls "eza --color=auto --icons=auto"
     
     # Replaces cd with zOxide
     alias cd z
@@ -16,9 +16,6 @@ if status is-interactive
     # Foreground ClamAV scan
     alias clamav '/opt/homebrew/opt/clamav/sbin/clamd --foreground'
 
-    # Put 7zip in line with other platforms
-    alias 7z 7zz
-
     # Normalize VSCode Call
     alias code code-insiders
 
@@ -29,4 +26,8 @@ if status is-interactive
     # Use bat instead of cat or man
     alias cat bat
     alias man batman
+    #alias grep batgrep
+    #alias diff batdiff
+    #alias watch batwatch
+    alias pretty prettybat
 end

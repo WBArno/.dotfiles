@@ -6,7 +6,7 @@
     #
 
     # Enable Nix Daemon
-    services.nix-daemon.enable = true;
+    #services.nix-daemon.enable = true;
 
     # Necessary for using flakes on this system; why is this not default?
     nix.settings.experimental-features = "nix-command flakes";
@@ -70,7 +70,7 @@
         nrb = "nix-rebuild";
 
         # Update Nix
-        nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon";
+        nix-update = "nix flake update --commit-lock-file --flake ~/.dotfiles/nix/charon; brew update; brew upgrade";
         nup = "nix-update";
 
         # Nix Search
@@ -135,7 +135,7 @@
         minikube # For VSCode Plugin
 
         # Utils
-        xquartz # X11 for macOS
+        #xquartz # X11 for macOS
         clamav # Antivirus
         istatmenus # System Monitoring
         bartender # Menu Bar Organizer
@@ -195,7 +195,6 @@
             "betterdiscord-installer" # Discord Plugins
             "crossover" # Windows Emulator
             "discord" # Chat Client
-            # "displaylink" # Thunderbolt Dock Drivers
             "forklift" # SFTP File Manager
             "fs-uae" # Amiga Emulator
             "fs-uae-launcher" # Amiga Emulator Frontend
